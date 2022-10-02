@@ -7,13 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E743B40228E97516001CD16C /* Personal.swift in Sources */ = {isa = PBXBuildFile; fileRef = E743B40128E97516001CD16C /* Personal.swift */; };
+		E743B40428E97541001CD16C /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = E743B40328E97541001CD16C /* Message.swift */; };
+		E743B40628E97563001CD16C /* Setting.swift in Sources */ = {isa = PBXBuildFile; fileRef = E743B40528E97563001CD16C /* Setting.swift */; };
+		E743B40B28E978A9001CD16C /* QcnoderApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = E743B40A28E978A9001CD16C /* QcnoderApi.swift */; };
 		E7FD4B2628E4478B004D8D12 /* qcnoderApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7FD4B2528E4478B004D8D12 /* qcnoderApp.swift */; };
-		E7FD4B2828E4478B004D8D12 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7FD4B2728E4478B004D8D12 /* ContentView.swift */; };
 		E7FD4B2A28E4478E004D8D12 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E7FD4B2928E4478E004D8D12 /* Assets.xcassets */; };
 		E7FD4B2D28E4478E004D8D12 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E7FD4B2C28E4478E004D8D12 /* Preview Assets.xcassets */; };
-		E7FD4B3828E4478E004D8D12 /* qcnoderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7FD4B3728E4478E004D8D12 /* qcnoderTests.swift */; };
-		E7FD4B4228E4478F004D8D12 /* qcnoderUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7FD4B4128E4478F004D8D12 /* qcnoderUITests.swift */; };
-		E7FD4B4428E4478F004D8D12 /* qcnoderUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7FD4B4328E4478F004D8D12 /* qcnoderUITestsLaunchTests.swift */; };
+		E7FD4B5228E449B7004D8D12 /* SidebarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7FD4B5128E449B7004D8D12 /* SidebarView.swift */; };
+		E7FD4B5428E44BC3004D8D12 /* TopicListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7FD4B5328E44BC3004D8D12 /* TopicListView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,17 +36,19 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E743B40128E97516001CD16C /* Personal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Personal.swift; sourceTree = "<group>"; };
+		E743B40328E97541001CD16C /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		E743B40528E97563001CD16C /* Setting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Setting.swift; sourceTree = "<group>"; };
+		E743B40A28E978A9001CD16C /* QcnoderApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QcnoderApi.swift; sourceTree = "<group>"; };
 		E7FD4B2228E4478B004D8D12 /* qcnoder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = qcnoder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7FD4B2528E4478B004D8D12 /* qcnoderApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = qcnoderApp.swift; sourceTree = "<group>"; };
-		E7FD4B2728E4478B004D8D12 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		E7FD4B2928E4478E004D8D12 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E7FD4B2C28E4478E004D8D12 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		E7FD4B2E28E4478E004D8D12 /* qcnoder.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = qcnoder.entitlements; sourceTree = "<group>"; };
 		E7FD4B3328E4478E004D8D12 /* qcnoderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = qcnoderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		E7FD4B3728E4478E004D8D12 /* qcnoderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = qcnoderTests.swift; sourceTree = "<group>"; };
 		E7FD4B3D28E4478F004D8D12 /* qcnoderUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = qcnoderUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		E7FD4B4128E4478F004D8D12 /* qcnoderUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = qcnoderUITests.swift; sourceTree = "<group>"; };
-		E7FD4B4328E4478F004D8D12 /* qcnoderUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = qcnoderUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		E7FD4B5128E449B7004D8D12 /* SidebarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SidebarView.swift; sourceTree = "<group>"; };
+		E7FD4B5328E44BC3004D8D12 /* TopicListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicListView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,12 +76,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E743B40728E976C1001CD16C /* api */ = {
+			isa = PBXGroup;
+			children = (
+				E743B40928E976DD001CD16C /* models */,
+				E743B40A28E978A9001CD16C /* QcnoderApi.swift */,
+			);
+			name = api;
+			sourceTree = "<group>";
+		};
+		E743B40928E976DD001CD16C /* models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = models;
+			sourceTree = "<group>";
+		};
 		E7FD4B1928E4478B004D8D12 = {
 			isa = PBXGroup;
 			children = (
 				E7FD4B2428E4478B004D8D12 /* qcnoder */,
-				E7FD4B3628E4478E004D8D12 /* qcnoderTests */,
-				E7FD4B4028E4478F004D8D12 /* qcnoderUITests */,
 				E7FD4B2328E4478B004D8D12 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -95,8 +113,9 @@
 		E7FD4B2428E4478B004D8D12 /* qcnoder */ = {
 			isa = PBXGroup;
 			children = (
+				E743B40728E976C1001CD16C /* api */,
+				E7FD4B5028E4487B004D8D12 /* view */,
 				E7FD4B2528E4478B004D8D12 /* qcnoderApp.swift */,
-				E7FD4B2728E4478B004D8D12 /* ContentView.swift */,
 				E7FD4B2928E4478E004D8D12 /* Assets.xcassets */,
 				E7FD4B2E28E4478E004D8D12 /* qcnoder.entitlements */,
 				E7FD4B2B28E4478E004D8D12 /* Preview Content */,
@@ -112,21 +131,16 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		E7FD4B3628E4478E004D8D12 /* qcnoderTests */ = {
+		E7FD4B5028E4487B004D8D12 /* view */ = {
 			isa = PBXGroup;
 			children = (
-				E7FD4B3728E4478E004D8D12 /* qcnoderTests.swift */,
+				E7FD4B5128E449B7004D8D12 /* SidebarView.swift */,
+				E7FD4B5328E44BC3004D8D12 /* TopicListView.swift */,
+				E743B40128E97516001CD16C /* Personal.swift */,
+				E743B40328E97541001CD16C /* Message.swift */,
+				E743B40528E97563001CD16C /* Setting.swift */,
 			);
-			path = qcnoderTests;
-			sourceTree = "<group>";
-		};
-		E7FD4B4028E4478F004D8D12 /* qcnoderUITests */ = {
-			isa = PBXGroup;
-			children = (
-				E7FD4B4128E4478F004D8D12 /* qcnoderUITests.swift */,
-				E7FD4B4328E4478F004D8D12 /* qcnoderUITestsLaunchTests.swift */,
-			);
-			path = qcnoderUITests;
+			name = view;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,8 +273,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E7FD4B2828E4478B004D8D12 /* ContentView.swift in Sources */,
+				E7FD4B5428E44BC3004D8D12 /* TopicListView.swift in Sources */,
+				E743B40228E97516001CD16C /* Personal.swift in Sources */,
+				E743B40B28E978A9001CD16C /* QcnoderApi.swift in Sources */,
+				E743B40628E97563001CD16C /* Setting.swift in Sources */,
+				E743B40428E97541001CD16C /* Message.swift in Sources */,
 				E7FD4B2628E4478B004D8D12 /* qcnoderApp.swift in Sources */,
+				E7FD4B5228E449B7004D8D12 /* SidebarView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -268,7 +287,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E7FD4B3828E4478E004D8D12 /* qcnoderTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -276,8 +294,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E7FD4B4228E4478F004D8D12 /* qcnoderUITests.swift in Sources */,
-				E7FD4B4428E4478F004D8D12 /* qcnoderUITestsLaunchTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
