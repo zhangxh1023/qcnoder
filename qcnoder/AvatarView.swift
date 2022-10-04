@@ -21,7 +21,7 @@ struct AvatarView: View {
           image.resizable()
             .frame(width: 24, height: 24)
             .scaledToFit()
-            .mask(RoundedRectangle(cornerRadius: 8))
+            .mask(RoundedRectangle(cornerRadius: 6))
         } placeholder: {
           Color.gray
         }.frame(width: 24, height: 24)
