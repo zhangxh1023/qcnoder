@@ -24,8 +24,7 @@ struct AvatarView: View {
             .mask(RoundedRectangle(cornerRadius: 8))
         } placeholder: {
           Color.gray
-        }
-
+        }.frame(width: 24, height: 24)
       })
       .buttonStyle(StaticButtonStyle())
       
