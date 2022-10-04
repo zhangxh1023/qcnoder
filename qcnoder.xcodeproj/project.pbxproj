@@ -11,6 +11,13 @@
 		E743B40428E97541001CD16C /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = E743B40328E97541001CD16C /* Message.swift */; };
 		E743B40628E97563001CD16C /* Setting.swift in Sources */ = {isa = PBXBuildFile; fileRef = E743B40528E97563001CD16C /* Setting.swift */; };
 		E743B40B28E978A9001CD16C /* QcnoderApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = E743B40A28E978A9001CD16C /* QcnoderApi.swift */; };
+		E778359D28EA7C21003D3048 /* TopicModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E778359C28EA7C21003D3048 /* TopicModel.swift */; };
+		E77835A128EA80AA003D3048 /* CnodeResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E77835A028EA80AA003D3048 /* CnodeResponse.swift */; };
+		E77835A328EA819D003D3048 /* AuthorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E77835A228EA819D003D3048 /* AuthorModel.swift */; };
+		E77835A828EAB930003D3048 /* TopicListCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E77835A728EAB930003D3048 /* TopicListCellView.swift */; };
+		E77835AB28EAC1FF003D3048 /* PreviewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E77835AA28EAC1FF003D3048 /* PreviewData.swift */; };
+		E77835B028EACAD1003D3048 /* AvatarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E77835AF28EACAD1003D3048 /* AvatarView.swift */; };
+		E77835B228EC0B00003D3048 /* StaticButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = E77835B128EC0AFF003D3048 /* StaticButtonStyle.swift */; };
 		E7FD4B2628E4478B004D8D12 /* qcnoderApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7FD4B2528E4478B004D8D12 /* qcnoderApp.swift */; };
 		E7FD4B2A28E4478E004D8D12 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E7FD4B2928E4478E004D8D12 /* Assets.xcassets */; };
 		E7FD4B2D28E4478E004D8D12 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E7FD4B2C28E4478E004D8D12 /* Preview Assets.xcassets */; };
@@ -40,6 +47,13 @@
 		E743B40328E97541001CD16C /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		E743B40528E97563001CD16C /* Setting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Setting.swift; sourceTree = "<group>"; };
 		E743B40A28E978A9001CD16C /* QcnoderApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QcnoderApi.swift; sourceTree = "<group>"; };
+		E778359C28EA7C21003D3048 /* TopicModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicModel.swift; sourceTree = "<group>"; };
+		E77835A028EA80AA003D3048 /* CnodeResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CnodeResponse.swift; sourceTree = "<group>"; };
+		E77835A228EA819D003D3048 /* AuthorModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorModel.swift; sourceTree = "<group>"; };
+		E77835A728EAB930003D3048 /* TopicListCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicListCellView.swift; sourceTree = "<group>"; };
+		E77835AA28EAC1FF003D3048 /* PreviewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewData.swift; sourceTree = "<group>"; };
+		E77835AF28EACAD1003D3048 /* AvatarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarView.swift; sourceTree = "<group>"; };
+		E77835B128EC0AFF003D3048 /* StaticButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaticButtonStyle.swift; sourceTree = "<group>"; };
 		E7FD4B2228E4478B004D8D12 /* qcnoder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = qcnoder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7FD4B2528E4478B004D8D12 /* qcnoderApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = qcnoderApp.swift; sourceTree = "<group>"; };
 		E7FD4B2928E4478E004D8D12 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -88,8 +102,37 @@
 		E743B40928E976DD001CD16C /* models */ = {
 			isa = PBXGroup;
 			children = (
+				E778359C28EA7C21003D3048 /* TopicModel.swift */,
+				E77835A228EA819D003D3048 /* AuthorModel.swift */,
+				E77835A028EA80AA003D3048 /* CnodeResponse.swift */,
 			);
 			name = models;
+			sourceTree = "<group>";
+		};
+		E77835A428EAB8EB003D3048 /* topicList */ = {
+			isa = PBXGroup;
+			children = (
+				E7FD4B5328E44BC3004D8D12 /* TopicListView.swift */,
+				E77835A728EAB930003D3048 /* TopicListCellView.swift */,
+			);
+			path = topicList;
+			sourceTree = "<group>";
+		};
+		E77835A928EAC1E3003D3048 /* utils */ = {
+			isa = PBXGroup;
+			children = (
+				E77835AA28EAC1FF003D3048 /* PreviewData.swift */,
+				E77835B128EC0AFF003D3048 /* StaticButtonStyle.swift */,
+			);
+			path = utils;
+			sourceTree = "<group>";
+		};
+		E77835AC28EACA30003D3048 /* components */ = {
+			isa = PBXGroup;
+			children = (
+				E77835AF28EACAD1003D3048 /* AvatarView.swift */,
+			);
+			name = components;
 			sourceTree = "<group>";
 		};
 		E7FD4B1928E4478B004D8D12 = {
@@ -113,8 +156,9 @@
 		E7FD4B2428E4478B004D8D12 /* qcnoder */ = {
 			isa = PBXGroup;
 			children = (
+				E77835A928EAC1E3003D3048 /* utils */,
 				E743B40728E976C1001CD16C /* api */,
-				E7FD4B5028E4487B004D8D12 /* view */,
+				E7FD4B5028E4487B004D8D12 /* views */,
 				E7FD4B2528E4478B004D8D12 /* qcnoderApp.swift */,
 				E7FD4B2928E4478E004D8D12 /* Assets.xcassets */,
 				E7FD4B2E28E4478E004D8D12 /* qcnoder.entitlements */,
@@ -131,16 +175,17 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		E7FD4B5028E4487B004D8D12 /* view */ = {
+		E7FD4B5028E4487B004D8D12 /* views */ = {
 			isa = PBXGroup;
 			children = (
+				E77835AC28EACA30003D3048 /* components */,
+				E77835A428EAB8EB003D3048 /* topicList */,
 				E7FD4B5128E449B7004D8D12 /* SidebarView.swift */,
-				E7FD4B5328E44BC3004D8D12 /* TopicListView.swift */,
 				E743B40128E97516001CD16C /* Personal.swift */,
 				E743B40328E97541001CD16C /* Message.swift */,
 				E743B40528E97563001CD16C /* Setting.swift */,
 			);
-			name = view;
+			name = views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -276,9 +321,16 @@
 				E7FD4B5428E44BC3004D8D12 /* TopicListView.swift in Sources */,
 				E743B40228E97516001CD16C /* Personal.swift in Sources */,
 				E743B40B28E978A9001CD16C /* QcnoderApi.swift in Sources */,
+				E77835B228EC0B00003D3048 /* StaticButtonStyle.swift in Sources */,
+				E778359D28EA7C21003D3048 /* TopicModel.swift in Sources */,
+				E77835B028EACAD1003D3048 /* AvatarView.swift in Sources */,
+				E77835A828EAB930003D3048 /* TopicListCellView.swift in Sources */,
 				E743B40628E97563001CD16C /* Setting.swift in Sources */,
 				E743B40428E97541001CD16C /* Message.swift in Sources */,
+				E77835A328EA819D003D3048 /* AuthorModel.swift in Sources */,
+				E77835AB28EAC1FF003D3048 /* PreviewData.swift in Sources */,
 				E7FD4B2628E4478B004D8D12 /* qcnoderApp.swift in Sources */,
+				E77835A128EA80AA003D3048 /* CnodeResponse.swift in Sources */,
 				E7FD4B5228E449B7004D8D12 /* SidebarView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

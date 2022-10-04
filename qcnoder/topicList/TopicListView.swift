@@ -7,11 +7,17 @@
 
 import SwiftUI
 
+var api = QcnoderApi()
+
 struct TopicListView: View {
   
+  let pageLimit = 20
+  
   var topicTab: String
+  var page = 1
   
   @State var isLoading = true;
+  @State var topics: [TopicModel]?
   
   var body: some View {
     NavigationView {
@@ -19,7 +25,14 @@ struct TopicListView: View {
         ProgressView()
           .frame(minWidth: 400)
       } else {
-        Text(topicTab)
+        List {
+          if let topics = topics {
+            ForEach(topics) { topic in
+              TopicListCellView(topic: topic)
+            }
+          }
+        }
+        .frame(minWidth: 400)
       }
     }
     .task {
@@ -30,7 +43,8 @@ struct TopicListView: View {
   func loadData() async {
     isLoading = true;
     do {
-      try await Task.sleep(nanoseconds: 1_000_000_000)
+      let data = try await api.getTopics(page: page, limit: pageLimit, tab: topicTab)
+      self.topics = data?.data
     } catch {
       
     }

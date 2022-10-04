@@ -42,12 +42,7 @@ struct SidebarView: View {
         }
       }
     }
-    .listStyle(SidebarListStyle())
-    .onAppear{
-      Task {
-        
-      }
-    }
+    .listStyle(.sidebar)
   }
 }
 
