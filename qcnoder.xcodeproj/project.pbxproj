@@ -7,11 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		E743B40228E97516001CD16C /* Personal.swift in Sources */ = {isa = PBXBuildFile; fileRef = E743B40128E97516001CD16C /* Personal.swift */; };
-		E743B40428E97541001CD16C /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = E743B40328E97541001CD16C /* Message.swift */; };
-		E743B40628E97563001CD16C /* Setting.swift in Sources */ = {isa = PBXBuildFile; fileRef = E743B40528E97563001CD16C /* Setting.swift */; };
+		E743B40228E97516001CD16C /* PersonalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E743B40128E97516001CD16C /* PersonalView.swift */; };
+		E743B40428E97541001CD16C /* MessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E743B40328E97541001CD16C /* MessageView.swift */; };
+		E743B40628E97563001CD16C /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E743B40528E97563001CD16C /* SettingView.swift */; };
 		E743B40B28E978A9001CD16C /* QcnoderApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = E743B40A28E978A9001CD16C /* QcnoderApi.swift */; };
 		E74C0D9428ED5D1800A9F622 /* DateTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = E74C0D9328ED5D1800A9F622 /* DateTime.swift */; };
+		E74C0D9628ED77BD00A9F622 /* UserNameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E74C0D9528ED77BD00A9F622 /* UserNameView.swift */; };
 		E778359D28EA7C21003D3048 /* TopicModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E778359C28EA7C21003D3048 /* TopicModel.swift */; };
 		E77835A128EA80AA003D3048 /* CnodeResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E77835A028EA80AA003D3048 /* CnodeResponse.swift */; };
 		E77835A328EA819D003D3048 /* AuthorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E77835A228EA819D003D3048 /* AuthorModel.swift */; };
@@ -45,11 +46,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		E743B40128E97516001CD16C /* Personal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Personal.swift; sourceTree = "<group>"; };
-		E743B40328E97541001CD16C /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
-		E743B40528E97563001CD16C /* Setting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Setting.swift; sourceTree = "<group>"; };
+		E743B40128E97516001CD16C /* PersonalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalView.swift; sourceTree = "<group>"; };
+		E743B40328E97541001CD16C /* MessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageView.swift; sourceTree = "<group>"; };
+		E743B40528E97563001CD16C /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
 		E743B40A28E978A9001CD16C /* QcnoderApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QcnoderApi.swift; sourceTree = "<group>"; };
 		E74C0D9328ED5D1800A9F622 /* DateTime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateTime.swift; sourceTree = "<group>"; };
+		E74C0D9528ED77BD00A9F622 /* UserNameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserNameView.swift; sourceTree = "<group>"; };
 		E778359C28EA7C21003D3048 /* TopicModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicModel.swift; sourceTree = "<group>"; };
 		E77835A028EA80AA003D3048 /* CnodeResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CnodeResponse.swift; sourceTree = "<group>"; };
 		E77835A228EA819D003D3048 /* AuthorModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorModel.swift; sourceTree = "<group>"; };
@@ -137,6 +139,7 @@
 			isa = PBXGroup;
 			children = (
 				E77835AF28EACAD1003D3048 /* AvatarView.swift */,
+				E74C0D9528ED77BD00A9F622 /* UserNameView.swift */,
 			);
 			name = components;
 			sourceTree = "<group>";
@@ -187,9 +190,9 @@
 				E77835AC28EACA30003D3048 /* components */,
 				E77835A428EAB8EB003D3048 /* topicList */,
 				E7FD4B5128E449B7004D8D12 /* SidebarView.swift */,
-				E743B40128E97516001CD16C /* Personal.swift */,
-				E743B40328E97541001CD16C /* Message.swift */,
-				E743B40528E97563001CD16C /* Setting.swift */,
+				E743B40128E97516001CD16C /* PersonalView.swift */,
+				E743B40328E97541001CD16C /* MessageView.swift */,
+				E743B40528E97563001CD16C /* SettingView.swift */,
 			);
 			name = views;
 			sourceTree = "<group>";
@@ -325,7 +328,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				E7FD4B5428E44BC3004D8D12 /* TopicListView.swift in Sources */,
-				E743B40228E97516001CD16C /* Personal.swift in Sources */,
+				E74C0D9628ED77BD00A9F622 /* UserNameView.swift in Sources */,
+				E743B40228E97516001CD16C /* PersonalView.swift in Sources */,
 				E743B40B28E978A9001CD16C /* QcnoderApi.swift in Sources */,
 				E77835B228EC0B00003D3048 /* StaticButtonStyle.swift in Sources */,
 				E778359D28EA7C21003D3048 /* TopicModel.swift in Sources */,
@@ -333,8 +337,8 @@
 				E74C0D9428ED5D1800A9F622 /* DateTime.swift in Sources */,
 				E77835B428EC20C2003D3048 /* TopicTarget.swift in Sources */,
 				E77835A828EAB930003D3048 /* TopicListCellView.swift in Sources */,
-				E743B40628E97563001CD16C /* Setting.swift in Sources */,
-				E743B40428E97541001CD16C /* Message.swift in Sources */,
+				E743B40628E97563001CD16C /* SettingView.swift in Sources */,
+				E743B40428E97541001CD16C /* MessageView.swift in Sources */,
 				E77835A328EA819D003D3048 /* AuthorModel.swift in Sources */,
 				E77835AB28EAC1FF003D3048 /* PreviewData.swift in Sources */,
 				E7FD4B2628E4478B004D8D12 /* qcnoderApp.swift in Sources */,

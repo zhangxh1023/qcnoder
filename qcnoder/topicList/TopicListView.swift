@@ -32,7 +32,7 @@ struct TopicListView: View {
             }
           }
         }
-        .frame(minWidth: 400)
+        .frame(width: 400)
       }
     }
     .task {
