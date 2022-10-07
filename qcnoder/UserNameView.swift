@@ -8,13 +8,25 @@
 import SwiftUI
 
 struct UserNameView: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-    }
+  
+  let userName: String
+  
+  var body: some View {
+    
+    Button(action: {
+      print("click username")
+    }, label: {
+      Text(userName)
+        .font(.system(size: 12))
+        .foregroundColor(.gray)
+    })
+    .buttonStyle(StaticButtonStyle())
+    
+  }
 }
 
 struct UserNameView_Previews: PreviewProvider {
-    static var previews: some View {
-        UserNameView()
-    }
+  static var previews: some View {
+    UserNameView(userName: "张三丰")
+  }
 }

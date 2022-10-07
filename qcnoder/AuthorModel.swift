@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct AuthorModel: Codable {
+public struct AuthorModel: Codable {
 
   var loginname : String? = nil
   var avatarUrl : String? = nil
@@ -19,7 +19,7 @@ struct AuthorModel: Codable {
   
   }
 
-  init(from decoder: Decoder) throws {
+  public init(from decoder: Decoder) throws {
     let values = try decoder.container(keyedBy: CodingKeys.self)
 
     loginname = try values.decodeIfPresent(String.self , forKey: .loginname )

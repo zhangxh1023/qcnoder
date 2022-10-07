@@ -19,8 +19,30 @@ public struct DateTime {
     let beforeTime = dateFormatter.date(from: time)
     let calendar = Calendar.current
     let now = Date()
-    let diff = calendar.dateComponents([.day], from: beforeTime!, to: now)
-    return String(diff.day!) + "天前"
+    let diff = calendar.dateComponents([.month, .day, .hour, .minute, .second], from: beforeTime!, to: now)
+    
+    if let month = diff.month {
+      if month > 0 {
+        return "\(String(month))个月前"
+      }
+    }
+    if let day = diff.day {
+      if day > 0 {
+        return "\(String(day))天前"
+      }
+    }
+    if let hour = diff.hour {
+      if hour > 0 {
+        return "\(String(hour))小时前"
+      }
+    }
+    if let minute = diff.minute {
+      if minute > 0 {
+        return "\(String(minute))小时前"
+      }
+    }
+    
+    return "\(String(diff.second ?? 0))秒前"
   }
   
 }

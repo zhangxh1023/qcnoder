@@ -7,8 +7,6 @@
 
 import SwiftUI
 
-let topicTarget = TopicTarget()
-
 struct TopicListCellView: View {
   
   let topic: TopicModel
@@ -24,21 +22,21 @@ struct TopicListCellView: View {
       VStack (alignment: .leading) {
         HStack {
           ZStack {
-            Text(topicTarget.getText(topic: topic))
+            Text(TopicTarget.getText(topic: topic))
               .font(.system(size: 12))
               .foregroundColor(.white)
           }
           .frame(width: 30, height: 18)
-          .background(topicTarget.getColor(topic: topic))
+          .background(TopicTarget.getColor(topic: topic))
           .mask(RoundedRectangle(cornerRadius: 3))
           
           Text(topic.title ?? "")
         }
         
-        HStack {
+        HStack(spacing: 0) {
+          UserNameView(userName: topic.author?.loginname ?? "")
           Text(String(
-            format: "%@·%@",
-            topic.author?.loginname ?? "",
+            format: "·%@",
             DateTime.date2BeforeTime(time: topic.createAt ?? "")
           ))
           
@@ -46,6 +44,7 @@ struct TopicListCellView: View {
             format: "最新回复·%@",
             DateTime.date2BeforeTime(time: topic.lastReplyAt ?? "")
           ))
+          .padding(EdgeInsets(top: 0, leading: 10, bottom: 0, trailing: 0))
         }
         .font(.system(size: 12))
         .foregroundColor(.gray)
@@ -74,7 +73,6 @@ struct TopicListCellView: View {
 
 struct TopicListCellView_Previews: PreviewProvider {
   static var previews: some View {
-    let previewData = PreviewData()
-    TopicListCellView(topic: previewData.getTopic())
+    TopicListCellView(topic: PreviewData.getTopic())
   }
 }

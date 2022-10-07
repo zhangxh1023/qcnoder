@@ -28,7 +28,13 @@ struct TopicListView: View {
         List {
           if let topics = topics {
             ForEach(topics) { topic in
-              TopicListCellView(topic: topic)
+              NavigationLink(
+                destination: TopicDetailView(
+                  topicDetail: TopicModel2Detail.convert(topic: topic)
+                ),
+                label: {
+                  TopicListCellView(topic: topic)
+                })
             }
           }
         }

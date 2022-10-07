@@ -10,7 +10,7 @@ import SwiftUI
 
 public struct TopicTarget {
   
-  public func getText(topic: TopicModel) -> String {
+  public static func getText(topic: TopicModel) -> String {
     if let isTop = topic.top {
       if isTop {
         return "置顶"
@@ -35,7 +35,7 @@ public struct TopicTarget {
     return "测试"
   }
   
-  public func getColor(topic: TopicModel) -> Color {
+  public static func getColor(topic: TopicModel) -> Color {
     if topic.tab == "good" || topic.good ?? false || topic.top ?? false {
       return Color.green
     }

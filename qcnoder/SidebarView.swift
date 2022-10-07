@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct SidebarView: View {
-  private let topics: [[String]] = [["", "全部"], ["ask", "问答"], ["share", "分享"], ["job", "招聘"], ["good", "精华"]]
+  private let topics: [[String]] = [["", "全部"], ["ask", "问答"], ["share", "分享"], ["job", "招聘"], ["good", "精华"], ["dev", "客户端测试"]]
   @State var unreadMsgCnt: Int = 5
   
   
@@ -48,6 +48,6 @@ struct SidebarView: View {
 
 struct SidebarView_Previews: PreviewProvider {
   static var previews: some View {
-      SidebarView()
+    SidebarView()
   }
 }

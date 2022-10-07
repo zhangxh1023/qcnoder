@@ -73,4 +73,19 @@ public struct QcnoderApi {
     return data
   }
   
+  public func getTopicDetail(id: String, accesstoken: String?) async throws -> CnodeResponse<TopicDetailModel>? {
+    var args: [String: Any] = [
+      "mdrender": false
+    ]
+    if let accesstoken = accesstoken {
+      args["accesstoken"] = accesstoken
+    }
+    let (data, _) = try await request(
+      url: remoteUrl + "/topic/" + id,
+      args: args,
+      decodeClass: CnodeResponse<TopicDetailModel>.self
+    )
+    return data
+  }
+  
 }

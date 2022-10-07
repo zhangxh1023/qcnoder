@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E726C27028F0181C0016F295 /* ContentFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = E726C26F28F0181C0016F295 /* ContentFormat.swift */; };
+		E726C27328F0183C0016F295 /* MarkdownUI in Frameworks */ = {isa = PBXBuildFile; productRef = E726C27228F0183C0016F295 /* MarkdownUI */; };
+		E726C27528F0185A0016F295 /* TopicDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E726C27428F0185A0016F295 /* TopicDetailModel.swift */; };
+		E726C27728F0186F0016F295 /* ReplyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E726C27628F0186F0016F295 /* ReplyModel.swift */; };
+		E726C27E28F018F50016F295 /* TopicDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E726C27D28F018F50016F295 /* TopicDetailView.swift */; };
+		E726C28028F019540016F295 /* CollectBtnView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E726C27F28F019540016F295 /* CollectBtnView.swift */; };
+		E726C28228F01A5C0016F295 /* TopicModel2Detail.swift in Sources */ = {isa = PBXBuildFile; fileRef = E726C28128F01A5C0016F295 /* TopicModel2Detail.swift */; };
 		E743B40228E97516001CD16C /* PersonalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E743B40128E97516001CD16C /* PersonalView.swift */; };
 		E743B40428E97541001CD16C /* MessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E743B40328E97541001CD16C /* MessageView.swift */; };
 		E743B40628E97563001CD16C /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E743B40528E97563001CD16C /* SettingView.swift */; };
@@ -46,6 +53,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E726C26F28F0181C0016F295 /* ContentFormat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentFormat.swift; sourceTree = "<group>"; };
+		E726C27428F0185A0016F295 /* TopicDetailModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopicDetailModel.swift; sourceTree = "<group>"; };
+		E726C27628F0186F0016F295 /* ReplyModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReplyModel.swift; sourceTree = "<group>"; };
+		E726C27D28F018F50016F295 /* TopicDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopicDetailView.swift; sourceTree = "<group>"; };
+		E726C27F28F019540016F295 /* CollectBtnView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectBtnView.swift; sourceTree = "<group>"; };
+		E726C28128F01A5C0016F295 /* TopicModel2Detail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopicModel2Detail.swift; sourceTree = "<group>"; };
 		E743B40128E97516001CD16C /* PersonalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalView.swift; sourceTree = "<group>"; };
 		E743B40328E97541001CD16C /* MessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageView.swift; sourceTree = "<group>"; };
 		E743B40528E97563001CD16C /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
@@ -76,6 +89,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E726C27328F0183C0016F295 /* MarkdownUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -96,6 +110,46 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E726C27828F018A60016F295 /* sidebar */ = {
+			isa = PBXGroup;
+			children = (
+				E7FD4B5128E449B7004D8D12 /* SidebarView.swift */,
+			);
+			name = sidebar;
+			sourceTree = "<group>";
+		};
+		E726C27928F018B30016F295 /* personal */ = {
+			isa = PBXGroup;
+			children = (
+				E743B40128E97516001CD16C /* PersonalView.swift */,
+			);
+			path = personal;
+			sourceTree = "<group>";
+		};
+		E726C27A28F018BC0016F295 /* message */ = {
+			isa = PBXGroup;
+			children = (
+				E743B40328E97541001CD16C /* MessageView.swift */,
+			);
+			name = message;
+			sourceTree = "<group>";
+		};
+		E726C27B28F018C70016F295 /* setting */ = {
+			isa = PBXGroup;
+			children = (
+				E743B40528E97563001CD16C /* SettingView.swift */,
+			);
+			path = setting;
+			sourceTree = "<group>";
+		};
+		E726C27C28F018D40016F295 /* topicDetail */ = {
+			isa = PBXGroup;
+			children = (
+				E726C27D28F018F50016F295 /* TopicDetailView.swift */,
+			);
+			name = topicDetail;
+			sourceTree = "<group>";
+		};
 		E743B40728E976C1001CD16C /* api */ = {
 			isa = PBXGroup;
 			children = (
@@ -108,6 +162,8 @@
 		E743B40928E976DD001CD16C /* models */ = {
 			isa = PBXGroup;
 			children = (
+				E726C27628F0186F0016F295 /* ReplyModel.swift */,
+				E726C27428F0185A0016F295 /* TopicDetailModel.swift */,
 				E778359C28EA7C21003D3048 /* TopicModel.swift */,
 				E77835A228EA819D003D3048 /* AuthorModel.swift */,
 				E77835A028EA80AA003D3048 /* CnodeResponse.swift */,
@@ -127,6 +183,8 @@
 		E77835A928EAC1E3003D3048 /* utils */ = {
 			isa = PBXGroup;
 			children = (
+				E726C28128F01A5C0016F295 /* TopicModel2Detail.swift */,
+				E726C26F28F0181C0016F295 /* ContentFormat.swift */,
 				E77835AA28EAC1FF003D3048 /* PreviewData.swift */,
 				E74C0D9328ED5D1800A9F622 /* DateTime.swift */,
 				E77835B328EC20C2003D3048 /* TopicTarget.swift */,
@@ -140,6 +198,7 @@
 			children = (
 				E77835AF28EACAD1003D3048 /* AvatarView.swift */,
 				E74C0D9528ED77BD00A9F622 /* UserNameView.swift */,
+				E726C27F28F019540016F295 /* CollectBtnView.swift */,
 			);
 			name = components;
 			sourceTree = "<group>";
@@ -187,12 +246,13 @@
 		E7FD4B5028E4487B004D8D12 /* views */ = {
 			isa = PBXGroup;
 			children = (
+				E726C27C28F018D40016F295 /* topicDetail */,
+				E726C27B28F018C70016F295 /* setting */,
+				E726C27A28F018BC0016F295 /* message */,
+				E726C27928F018B30016F295 /* personal */,
+				E726C27828F018A60016F295 /* sidebar */,
 				E77835AC28EACA30003D3048 /* components */,
 				E77835A428EAB8EB003D3048 /* topicList */,
-				E7FD4B5128E449B7004D8D12 /* SidebarView.swift */,
-				E743B40128E97516001CD16C /* PersonalView.swift */,
-				E743B40328E97541001CD16C /* MessageView.swift */,
-				E743B40528E97563001CD16C /* SettingView.swift */,
 			);
 			name = views;
 			sourceTree = "<group>";
@@ -213,6 +273,9 @@
 			dependencies = (
 			);
 			name = qcnoder;
+			packageProductDependencies = (
+				E726C27228F0183C0016F295 /* MarkdownUI */,
+			);
 			productName = qcnoder;
 			productReference = E7FD4B2228E4478B004D8D12 /* qcnoder.app */;
 			productType = "com.apple.product-type.application";
@@ -285,6 +348,9 @@
 				Base,
 			);
 			mainGroup = E7FD4B1928E4478B004D8D12;
+			packageReferences = (
+				E726C27128F0183C0016F295 /* XCRemoteSwiftPackageReference "MarkdownUI" */,
+			);
 			productRefGroup = E7FD4B2328E4478B004D8D12 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -327,11 +393,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E726C27028F0181C0016F295 /* ContentFormat.swift in Sources */,
 				E7FD4B5428E44BC3004D8D12 /* TopicListView.swift in Sources */,
 				E74C0D9628ED77BD00A9F622 /* UserNameView.swift in Sources */,
 				E743B40228E97516001CD16C /* PersonalView.swift in Sources */,
 				E743B40B28E978A9001CD16C /* QcnoderApi.swift in Sources */,
 				E77835B228EC0B00003D3048 /* StaticButtonStyle.swift in Sources */,
+				E726C27528F0185A0016F295 /* TopicDetailModel.swift in Sources */,
 				E778359D28EA7C21003D3048 /* TopicModel.swift in Sources */,
 				E77835B028EACAD1003D3048 /* AvatarView.swift in Sources */,
 				E74C0D9428ED5D1800A9F622 /* DateTime.swift in Sources */,
@@ -341,9 +409,13 @@
 				E743B40428E97541001CD16C /* MessageView.swift in Sources */,
 				E77835A328EA819D003D3048 /* AuthorModel.swift in Sources */,
 				E77835AB28EAC1FF003D3048 /* PreviewData.swift in Sources */,
+				E726C27728F0186F0016F295 /* ReplyModel.swift in Sources */,
 				E7FD4B2628E4478B004D8D12 /* qcnoderApp.swift in Sources */,
+				E726C28028F019540016F295 /* CollectBtnView.swift in Sources */,
+				E726C27E28F018F50016F295 /* TopicDetailView.swift in Sources */,
 				E77835A128EA80AA003D3048 /* CnodeResponse.swift in Sources */,
 				E7FD4B5228E449B7004D8D12 /* SidebarView.swift in Sources */,
+				E726C28228F01A5C0016F295 /* TopicModel2Detail.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -648,6 +720,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		E726C27128F0183C0016F295 /* XCRemoteSwiftPackageReference "MarkdownUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "git@github.com:gonzalezreal/MarkdownUI.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		E726C27228F0183C0016F295 /* MarkdownUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E726C27128F0183C0016F295 /* XCRemoteSwiftPackageReference "MarkdownUI" */;
+			productName = MarkdownUI;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = E7FD4B1A28E4478B004D8D12 /* Project object */;
 }
