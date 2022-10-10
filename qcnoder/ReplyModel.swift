@@ -7,9 +7,9 @@
 
 import Foundation
 
-public struct ReplyModel: Decodable {
+public struct ReplyModel: Identifiable, Decodable {
   
-  var id       : String?   = nil
+  public var id       : String?   = nil
   var author   : AuthorModel? = AuthorModel()
   var content  : String?   = nil
   var ups      : [String]? = []

@@ -73,6 +73,9 @@ public struct QcnoderApi {
     return data
   }
   
+  /**
+    获取主题详情
+   */
   public func getTopicDetail(id: String, accesstoken: String?) async throws -> CnodeResponse<TopicDetailModel>? {
     var args: [String: Any] = [
       "mdrender": false

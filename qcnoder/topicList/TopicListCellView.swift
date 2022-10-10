@@ -16,7 +16,8 @@ struct TopicListCellView: View {
       AvatarView(
         avatarUrl: topic.author?.avatarUrl,
         width: 48,
-        height: 48
+        height: 48,
+        radius: 6
       )
       
       VStack (alignment: .leading) {
