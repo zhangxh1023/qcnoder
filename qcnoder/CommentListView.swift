@@ -11,6 +11,8 @@ struct CommentListView: View {
   
   let topicDetail: TopicDetailModel?
   
+  @Binding var showPersonalView: Bool
+  
   var body: some View {
     if let topicDetail = topicDetail {
       if let replies = topicDetail.replies {
@@ -27,7 +29,11 @@ struct CommentListView: View {
             if index > 0 {
               Divider()
             }
-            CommentListCellView(reply: replies[index], index: index + 1)
+            CommentListCellView(
+              reply: replies[index],
+              index: index + 1,
+              showPersonalView: $showPersonalView
+            )
               .padding()
           }
         }
@@ -38,6 +44,9 @@ struct CommentListView: View {
 
 struct CommentListView_Previews: PreviewProvider {
   static var previews: some View {
-    CommentListView(topicDetail: PreviewData.getTopicDetail())
+    CommentListView(
+      topicDetail: PreviewData.getTopicDetail(),
+      showPersonalView: .constant(false)
+    )
   }
 }

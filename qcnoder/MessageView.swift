@@ -1,20 +1,20 @@
 //
-//  Message.swift
+//  MessageView.swift
 //  qcnoder
 //
-//  Created by zhangxh1023 on 2022/10/2.
+//  Created by zhangxh1023 on 2022/10/11.
 //
 
 import SwiftUI
 
-struct Message: View {
+struct MessageView: View {
     var body: some View {
-        Text("Hello, Message!")
+        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
     }
 }
 
-struct Message_Previews: PreviewProvider {
+struct MessageView_Previews: PreviewProvider {
     static var previews: some View {
-        Message()
+        MessageView()
     }
 }

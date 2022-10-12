@@ -24,10 +24,12 @@ struct SidebarView: View {
       }
       
       Section(header: Text("账户")) {
-        NavigationLink(destination: Personal()) {
+        NavigationLink(destination: PersonalView(
+          showPeronalView: .constant(true)
+        )) {
           Label("个人", systemImage: "person.crop.circle")
         }
-        NavigationLink(destination: Message()) {
+        NavigationLink(destination: MessageView()) {
           let hasUnreadMsg = unreadMsgCnt > 0;
           Label(
             hasUnreadMsg ? String(format: "消息(%d)", arguments: [unreadMsgCnt]) : "消息",
@@ -37,7 +39,7 @@ struct SidebarView: View {
       }
       
       Section(header: Text("设置")) {
-        NavigationLink(destination: Setting()) {
+        NavigationLink(destination: SettingView()) {
           Label("设置", systemImage: "gear.circle")
         }
       }

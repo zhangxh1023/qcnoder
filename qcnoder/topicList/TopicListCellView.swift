@@ -11,6 +11,8 @@ struct TopicListCellView: View {
   
   let topic: TopicModel
   
+  @Binding var showPersonalView: Bool
+  
   var body: some View {
     HStack {
       AvatarView(
@@ -35,7 +37,10 @@ struct TopicListCellView: View {
         }
         
         HStack(spacing: 0) {
-          UserNameView(userName: topic.author?.loginname ?? "")
+          UserNameView(
+            userName: topic.author?.loginname ?? "",
+            showPersonalView: $showPersonalView
+          )
           Text(String(
             format: "·%@",
             DateTime.date2BeforeTime(time: topic.createAt ?? "")
@@ -74,6 +79,9 @@ struct TopicListCellView: View {
 
 struct TopicListCellView_Previews: PreviewProvider {
   static var previews: some View {
-    TopicListCellView(topic: PreviewData.getTopic())
+    TopicListCellView(
+      topic: PreviewData.getTopic(),
+      showPersonalView: .constant(false)
+    )
   }
 }

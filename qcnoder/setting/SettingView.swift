@@ -1,20 +1,20 @@
 //
-//  Setting.swift
+//  SettingView.swift
 //  qcnoder
 //
-//  Created by zhangxh1023 on 2022/10/2.
+//  Created by zhangxh1023 on 2022/10/11.
 //
 
 import SwiftUI
 
-struct Setting: View {
+struct SettingView: View {
     var body: some View {
-        Text("Hello, Setting!")
+        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
     }
 }
 
-struct Setting_Previews: PreviewProvider {
+struct SettingView_Previews: PreviewProvider {
     static var previews: some View {
-        Setting()
+        SettingView()
     }
 }

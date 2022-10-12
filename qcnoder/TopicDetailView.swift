@@ -16,6 +16,10 @@ struct TopicDetailView: View {
   
   @State var isLoading = true
   
+  @State var replyContent = ""
+  
+  @Binding var showPersonalView: Bool
+  
   var body: some View {
     if let topicDetail = topicDetail {
       List {
@@ -23,12 +27,20 @@ struct TopicDetailView: View {
           Text(topicDetail.title ?? "")
             .font(.title)
           
-          HStack {
-            Text(String(format: "发布于%@·作者%@·%d次浏览·来自 %@", DateTime.date2BeforeTime(time: topicDetail.createAt ?? ""),
-                        topicDetail.author?.loginname ?? "",
+          HStack(spacing: 0) {
+            Text(String(format: "发布于%@ · 作者 ",
+                        DateTime.date2BeforeTime(time: topicDetail.createAt ?? ""))
+            )
+            .font(.system(size: 12))
+            .foregroundColor(.gray)
+            UserNameView(
+              userName: topicDetail.author?.loginname ?? "",
+              showPersonalView: $showPersonalView
+            )
+            Text(String(format: " · %d次浏览 · 来自 %@",
                         topicDetail.visitCount ?? 0,
-                        TabConstant.getText(tab: topicDetail.tab ?? "")
-                       ))
+                        TabConstant.getText(tab: topicDetail.tab ?? ""))
+            )
             .font(.system(size: 12))
             .foregroundColor(.gray)
             Spacer()
@@ -39,17 +51,41 @@ struct TopicDetailView: View {
           
           Divider()
           if let content = topicDetail.content {
-            Markdown(ContentFormat.mdStaticUrl(content: content))
-              .font(.body)
-              .fixedSize(horizontal: false, vertical: true)
-              .padding()
+            //![yuque_diagram.jpg](//static.cnodejs.org/FlRpbwKzQWfj6vKKPI7vRILJ7aqk)
+            Markdown(content,
+                     baseURL: URL(string: "https:"))
+            .font(.body)
+            .fixedSize(horizontal: false, vertical: true)
+            .padding()
           }
           
           if isLoading {
             ProgressView()
           } else {
-            CommentListView(topicDetail: topicDetail)
+            CommentListView(
+              topicDetail: topicDetail,
+              showPersonalView: $showPersonalView
+            )
           }
+          
+          HStack {
+            Text("添加回复")
+            Spacer()
+          }
+          .padding()
+          .background(.gray)
+          .mask(RoundedRectangle(cornerRadius: 3))
+          ContentEditor(content: $replyContent)
+          Button(action: {
+            print("click reply btn")
+          }, label: {
+            Text("回复")
+              .frame(width: 50, height: 30)
+              .foregroundColor(.white)
+              .background(.blue)
+              .mask(RoundedRectangle(cornerRadius: 3))
+          })
+          .buttonStyle(StaticButtonStyle())
         }
       }
       .task{
@@ -79,6 +115,9 @@ struct TopicDetailView: View {
 struct TopicDetailView_Previews: PreviewProvider {
   static var previews: some View {
     
-    TopicDetailView(topicDetail: PreviewData.getTopicDetail())
+    TopicDetailView(
+      topicDetail: PreviewData.getTopicDetail(),
+      showPersonalView: .constant(false)
+    )
   }
 }
