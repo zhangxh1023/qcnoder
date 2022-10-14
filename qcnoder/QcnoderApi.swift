@@ -9,12 +9,12 @@ import Foundation
 
 public struct QcnoderApi {
   
-  public var accessToken: String?
+  public var accesstoken: String?
   
   private let remoteUrl = "https://cnodejs.org/api/v1"
   
-  public init (accessToken: String? = nil) {
-    self.accessToken = accessToken
+  public init (accesstoken: String? = nil) {
+    self.accesstoken = accesstoken
   }
   
   private func request<T>(httpMethod: String = "GET", url: String, args: [String: Any]? = nil, decodeClass: T.Type) async throws -> (
@@ -36,7 +36,7 @@ public struct QcnoderApi {
     request.httpMethod = httpMethod
     request.addValue("application/json", forHTTPHeaderField: "Content-Type")
     
-    if let accessToken = accessToken {
+    if let accessToken = accesstoken {
       request.setValue("Bearer " + accessToken, forHTTPHeaderField: "Authorization")
     }
     
@@ -56,7 +56,7 @@ public struct QcnoderApi {
   /**
    获取主题
    */
-  public func getTopics(page: Int, limit: Int, tab: String) async throws -> CnodeResponse<[TopicModel]>? {
+  public func getTopics(page: Int, limit: Int, tab: String) async throws -> CnodeResponseModel<[TopicModel]>? {
     var args: [String: Any] = [
       "page": page,
       "limit": limit,
@@ -68,7 +68,7 @@ public struct QcnoderApi {
     let (data, _) = try await request(
       url: remoteUrl + "/topics",
       args: args,
-      decodeClass: CnodeResponse<[TopicModel]>.self
+      decodeClass: CnodeResponseModel<[TopicModel]>.self
     )
     return data
   }
@@ -76,7 +76,7 @@ public struct QcnoderApi {
   /**
     获取主题详情
    */
-  public func getTopicDetail(id: String, accesstoken: String?) async throws -> CnodeResponse<TopicDetailModel>? {
+  public func getTopicDetail(id: String) async throws -> CnodeResponseModel<TopicDetailModel>? {
     var args: [String: Any] = [
       "mdrender": false
     ]
@@ -86,7 +86,18 @@ public struct QcnoderApi {
     let (data, _) = try await request(
       url: remoteUrl + "/topic/" + id,
       args: args,
-      decodeClass: CnodeResponse<TopicDetailModel>.self
+      decodeClass: CnodeResponseModel<TopicDetailModel>.self
+    )
+    return data
+  }
+  
+  /**
+    获取用户信息
+   */
+  public func getUser(loginname: String) async throws -> CnodeResponseModel<UserModel>? {
+    let (data, _) = try await request(
+      url: remoteUrl + "/user/" + loginname,
+      decodeClass: CnodeResponseModel<UserModel>.self
     )
     return data
   }

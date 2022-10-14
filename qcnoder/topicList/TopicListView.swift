@@ -19,48 +19,35 @@ struct TopicListView: View {
   @State var isLoading = true;
   @State var topics: [TopicModel]?
   
-  @State var showPersonalView = false
-  
   @State var load = false
   
   var body: some View {
-    if showPersonalView {
-      PersonalView(
-        showPeronalView: $showPersonalView
-      )
-      .transition(
-        AnyTransition.move(edge: .leading)
-      )
-    } else {
-      NavigationView {
-        if isLoading {
-          ProgressView()
-            .frame(minWidth: 400)
-        } else {
-          List {
-            if let topics = topics {
-              ForEach(topics) { topic in
-                NavigationLink(
-                  destination: TopicDetailView(
-                    topicDetail: TopicModel2Detail.convert(topic: topic),
-                    showPersonalView: $showPersonalView
-                  ),
-                  label: {
-                    TopicListCellView(
-                      topic: topic,
-                      showPersonalView: $showPersonalView
-                    )
-                  })
-              }
+    NavigationView {
+      if isLoading {
+        ProgressView()
+          .frame(minWidth: 400)
+      } else {
+        List {
+          if let topics = topics {
+            ForEach(topics) { topic in
+              NavigationLink(
+                destination: TopicDetailView(
+                  topicDetail: TopicModel2Detail.convert(topic: topic)
+                ),
+                label: {
+                  TopicListCellView(
+                    topic: topic
+                  )
+                })
             }
           }
-          .frame(width: 400)
         }
+        .frame(width: 400)
       }
-      .task {
-        if !load {
-          await loadData()
-        }
+    }
+    .task {
+      if !load {
+        await loadData()
       }
     }
   }

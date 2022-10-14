@@ -11,12 +11,11 @@ struct TopicListCellView: View {
   
   let topic: TopicModel
   
-  @Binding var showPersonalView: Bool
-  
   var body: some View {
     HStack {
       AvatarView(
         avatarUrl: topic.author?.avatarUrl,
+        loginname: topic.author?.loginname,
         width: 48,
         height: 48,
         radius: 6
@@ -38,8 +37,7 @@ struct TopicListCellView: View {
         
         HStack(spacing: 0) {
           UserNameView(
-            userName: topic.author?.loginname ?? "",
-            showPersonalView: $showPersonalView
+            userName: topic.author?.loginname ?? ""
           )
           Text(String(
             format: "·%@",
@@ -80,8 +78,7 @@ struct TopicListCellView: View {
 struct TopicListCellView_Previews: PreviewProvider {
   static var previews: some View {
     TopicListCellView(
-      topic: PreviewData.getTopic(),
-      showPersonalView: .constant(false)
+      topic: PreviewData.getTopic()
     )
   }
 }

@@ -25,7 +25,7 @@ struct ContentEditor: View {
         }, label: {
           Image(systemName: "eye")
         })
-        .buttonStyle(StaticButtonStyle())
+        .buttonStyle(BorderlessButtonStyle())
       }
       .padding()
       

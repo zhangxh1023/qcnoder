@@ -36,7 +36,7 @@ struct CollectBtnView: View {
           .background(isCollect ? .gray : .teal)
           .mask(RoundedRectangle(cornerRadius: 3))
         })
-        .buttonStyle(StaticButtonStyle())
+        .buttonStyle(BorderlessButtonStyle())
       }
     }
   }

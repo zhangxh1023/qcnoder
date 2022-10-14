@@ -11,8 +11,6 @@ struct CommentListView: View {
   
   let topicDetail: TopicDetailModel?
   
-  @Binding var showPersonalView: Bool
-  
   var body: some View {
     if let topicDetail = topicDetail {
       if let replies = topicDetail.replies {
@@ -31,8 +29,7 @@ struct CommentListView: View {
             }
             CommentListCellView(
               reply: replies[index],
-              index: index + 1,
-              showPersonalView: $showPersonalView
+              index: index + 1
             )
               .padding()
           }
@@ -45,8 +42,7 @@ struct CommentListView: View {
 struct CommentListView_Previews: PreviewProvider {
   static var previews: some View {
     CommentListView(
-      topicDetail: PreviewData.getTopicDetail(),
-      showPersonalView: .constant(false)
+      topicDetail: PreviewData.getTopicDetail()
     )
   }
 }

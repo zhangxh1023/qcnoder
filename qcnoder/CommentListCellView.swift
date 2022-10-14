@@ -14,20 +14,18 @@ struct CommentListCellView: View {
   
   let index: Int?
   
-  @Binding var showPersonalView: Bool
-  
   var body: some View {
     if let reply = reply {
       VStack(alignment: .leading) {
         HStack {
           if let author = reply.author {
             AvatarView(avatarUrl: author.avatarUrl,
+                       loginname: author.loginname,
                        width: 24,
                        height: 24,
                        radius: 3)
             UserNameView(
-              userName: author.loginname ?? "",
-              showPersonalView: $showPersonalView
+              userName: author.loginname ?? ""
             )
           }
           Text(String(format: "%d楼·%@",
@@ -44,7 +42,7 @@ struct CommentListCellView: View {
                 }, label: {
                   Image(systemName: "hand.thumbsup")
                 })
-                .buttonStyle(StaticButtonStyle())
+                .buttonStyle(BorderlessButtonStyle())
                 Text(String(reply.ups?.count ?? 0))
               }
             }
@@ -63,8 +61,7 @@ struct CommentListCellView_Previews: PreviewProvider {
   static var previews: some View {
     CommentListCellView(
       reply: PreviewData.getReplies()[0],
-      index: 10,
-      showPersonalView: .constant(false)
+      index: 10
     )
   }
 }

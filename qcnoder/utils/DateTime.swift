@@ -19,8 +19,13 @@ public struct DateTime {
     let beforeTime = dateFormatter.date(from: time)
     let calendar = Calendar.current
     let now = Date()
-    let diff = calendar.dateComponents([.month, .day, .hour, .minute, .second], from: beforeTime!, to: now)
+    let diff = calendar.dateComponents([.year, .month, .day, .hour, .minute, .second], from: beforeTime!, to: now)
     
+    if let year = diff.year {
+      if year > 0 {
+        return "\(String(year))年前"
+      }
+    }
     if let month = diff.month {
       if month > 0 {
         return "\(String(month))个月前"

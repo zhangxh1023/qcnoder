@@ -18,8 +18,6 @@ struct TopicDetailView: View {
   
   @State var replyContent = ""
   
-  @Binding var showPersonalView: Bool
-  
   var body: some View {
     if let topicDetail = topicDetail {
       List {
@@ -34,8 +32,7 @@ struct TopicDetailView: View {
             .font(.system(size: 12))
             .foregroundColor(.gray)
             UserNameView(
-              userName: topicDetail.author?.loginname ?? "",
-              showPersonalView: $showPersonalView
+              userName: topicDetail.author?.loginname ?? ""
             )
             Text(String(format: " · %d次浏览 · 来自 %@",
                         topicDetail.visitCount ?? 0,
@@ -63,8 +60,7 @@ struct TopicDetailView: View {
             ProgressView()
           } else {
             CommentListView(
-              topicDetail: topicDetail,
-              showPersonalView: $showPersonalView
+              topicDetail: topicDetail
             )
           }
           
@@ -85,7 +81,7 @@ struct TopicDetailView: View {
               .background(.blue)
               .mask(RoundedRectangle(cornerRadius: 3))
           })
-          .buttonStyle(StaticButtonStyle())
+          .buttonStyle(BorderlessButtonStyle())
         }
       }
       .task{
@@ -99,7 +95,7 @@ struct TopicDetailView: View {
     if let topicDetail = topicDetail {
       if let id = topicDetail.id {
         do {
-          let data = try await api.getTopicDetail(id: id, accesstoken: "")
+          let data = try await api.getTopicDetail(id: id)
           if let data = data {
             self.topicDetail = data.data
           }
@@ -116,8 +112,7 @@ struct TopicDetailView_Previews: PreviewProvider {
   static var previews: some View {
     
     TopicDetailView(
-      topicDetail: PreviewData.getTopicDetail(),
-      showPersonalView: .constant(false)
+      topicDetail: PreviewData.getTopicDetail()
     )
   }
 }

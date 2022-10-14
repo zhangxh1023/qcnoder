@@ -11,24 +11,26 @@ struct UserNameView: View {
   
   let userName: String
   
-  @Binding var showPersonalView: Bool
+  @State private var showPopover = false;
   
   var body: some View {
     Button(action: {
-      print("click username")
-      showPersonalView = true
+      showPopover = true
     }, label: {
       Text(userName)
         .font(.system(size: 12))
         .foregroundColor(.gray)
     })
-    .buttonStyle(StaticButtonStyle())
+    .buttonStyle(BorderlessButtonStyle())
+    .popover(isPresented: $showPopover, content: {
+      UserPopoverView(loginname: userName)
+    })
   }
   
 }
 
 struct UserNameView_Previews: PreviewProvider {
   static var previews: some View {
-    UserNameView(userName: "张三丰", showPersonalView: .constant(false))
+    UserNameView(userName: "张三丰")
   }
 }

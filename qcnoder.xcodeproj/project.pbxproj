@@ -14,7 +14,6 @@
 		E726C28028F019540016F295 /* CollectBtnView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E726C27F28F019540016F295 /* CollectBtnView.swift */; };
 		E726C28228F01A5C0016F295 /* TopicModel2Detail.swift in Sources */ = {isa = PBXBuildFile; fileRef = E726C28128F01A5C0016F295 /* TopicModel2Detail.swift */; };
 		E734B5B628F5096200F8B0FB /* ContentEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E734B5B528F5096200F8B0FB /* ContentEditor.swift */; };
-		E734B5BE28F51E2C00F8B0FB /* PersonalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E734B5BD28F51E2C00F8B0FB /* PersonalView.swift */; };
 		E734B5C028F51EB800F8B0FB /* MessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E734B5BF28F51EB800F8B0FB /* MessageView.swift */; };
 		E734B5C228F51EC800F8B0FB /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E734B5C128F51EC800F8B0FB /* SettingView.swift */; };
 		E73E673128F4059C00D67B36 /* TabConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = E73E673028F4059C00D67B36 /* TabConstant.swift */; };
@@ -23,13 +22,17 @@
 		E743B40B28E978A9001CD16C /* QcnoderApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = E743B40A28E978A9001CD16C /* QcnoderApi.swift */; };
 		E74C0D9428ED5D1800A9F622 /* DateTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = E74C0D9328ED5D1800A9F622 /* DateTime.swift */; };
 		E74C0D9628ED77BD00A9F622 /* UserNameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E74C0D9528ED77BD00A9F622 /* UserNameView.swift */; };
+		E75D1B2E28F9459F00CEE595 /* UserPopoverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E75D1B2D28F9459F00CEE595 /* UserPopoverView.swift */; };
+		E75D1B3028F9483B00CEE595 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E75D1B2F28F9483B00CEE595 /* UserModel.swift */; };
+		E75D1B3428F9492900CEE595 /* RecentReplyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E75D1B3328F9492900CEE595 /* RecentReplyModel.swift */; };
+		E75D1B3628F9499800CEE595 /* CnodeResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E75D1B3528F9499800CEE595 /* CnodeResponseModel.swift */; };
+		E75D1B3A28F964D000CEE595 /* UserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E75D1B3928F964D000CEE595 /* UserView.swift */; };
+		E75D1B3C28F964E400CEE595 /* UserSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E75D1B3B28F964E400CEE595 /* UserSheetView.swift */; };
 		E778359D28EA7C21003D3048 /* TopicModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E778359C28EA7C21003D3048 /* TopicModel.swift */; };
-		E77835A128EA80AA003D3048 /* CnodeResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E77835A028EA80AA003D3048 /* CnodeResponse.swift */; };
 		E77835A328EA819D003D3048 /* AuthorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E77835A228EA819D003D3048 /* AuthorModel.swift */; };
 		E77835A828EAB930003D3048 /* TopicListCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E77835A728EAB930003D3048 /* TopicListCellView.swift */; };
 		E77835AB28EAC1FF003D3048 /* PreviewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E77835AA28EAC1FF003D3048 /* PreviewData.swift */; };
 		E77835B028EACAD1003D3048 /* AvatarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E77835AF28EACAD1003D3048 /* AvatarView.swift */; };
-		E77835B228EC0B00003D3048 /* StaticButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = E77835B128EC0AFF003D3048 /* StaticButtonStyle.swift */; };
 		E77835B428EC20C2003D3048 /* TopicTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = E77835B328EC20C2003D3048 /* TopicTarget.swift */; };
 		E7FD4B2628E4478B004D8D12 /* qcnoderApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7FD4B2528E4478B004D8D12 /* qcnoderApp.swift */; };
 		E7FD4B2A28E4478E004D8D12 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E7FD4B2928E4478E004D8D12 /* Assets.xcassets */; };
@@ -62,7 +65,6 @@
 		E726C27F28F019540016F295 /* CollectBtnView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectBtnView.swift; sourceTree = "<group>"; };
 		E726C28128F01A5C0016F295 /* TopicModel2Detail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopicModel2Detail.swift; sourceTree = "<group>"; };
 		E734B5B528F5096200F8B0FB /* ContentEditor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentEditor.swift; sourceTree = "<group>"; };
-		E734B5BD28F51E2C00F8B0FB /* PersonalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalView.swift; sourceTree = "<group>"; };
 		E734B5BF28F51EB800F8B0FB /* MessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageView.swift; sourceTree = "<group>"; };
 		E734B5C128F51EC800F8B0FB /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
 		E73E673028F4059C00D67B36 /* TabConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabConstant.swift; sourceTree = "<group>"; };
@@ -71,13 +73,17 @@
 		E743B40A28E978A9001CD16C /* QcnoderApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QcnoderApi.swift; sourceTree = "<group>"; };
 		E74C0D9328ED5D1800A9F622 /* DateTime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateTime.swift; sourceTree = "<group>"; };
 		E74C0D9528ED77BD00A9F622 /* UserNameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserNameView.swift; sourceTree = "<group>"; };
+		E75D1B2D28F9459F00CEE595 /* UserPopoverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPopoverView.swift; sourceTree = "<group>"; };
+		E75D1B2F28F9483B00CEE595 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		E75D1B3328F9492900CEE595 /* RecentReplyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentReplyModel.swift; sourceTree = "<group>"; };
+		E75D1B3528F9499800CEE595 /* CnodeResponseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CnodeResponseModel.swift; sourceTree = "<group>"; };
+		E75D1B3928F964D000CEE595 /* UserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserView.swift; sourceTree = "<group>"; };
+		E75D1B3B28F964E400CEE595 /* UserSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSheetView.swift; sourceTree = "<group>"; };
 		E778359C28EA7C21003D3048 /* TopicModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicModel.swift; sourceTree = "<group>"; };
-		E77835A028EA80AA003D3048 /* CnodeResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CnodeResponse.swift; sourceTree = "<group>"; };
 		E77835A228EA819D003D3048 /* AuthorModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorModel.swift; sourceTree = "<group>"; };
 		E77835A728EAB930003D3048 /* TopicListCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicListCellView.swift; sourceTree = "<group>"; };
 		E77835AA28EAC1FF003D3048 /* PreviewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewData.swift; sourceTree = "<group>"; };
 		E77835AF28EACAD1003D3048 /* AvatarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarView.swift; sourceTree = "<group>"; };
-		E77835B128EC0AFF003D3048 /* StaticButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaticButtonStyle.swift; sourceTree = "<group>"; };
 		E77835B328EC20C2003D3048 /* TopicTarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicTarget.swift; sourceTree = "<group>"; };
 		E7FD4B2228E4478B004D8D12 /* qcnoder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = qcnoder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7FD4B2528E4478B004D8D12 /* qcnoderApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = qcnoderApp.swift; sourceTree = "<group>"; };
@@ -122,14 +128,6 @@
 				E7FD4B5128E449B7004D8D12 /* SidebarView.swift */,
 			);
 			name = sidebar;
-			sourceTree = "<group>";
-		};
-		E726C27928F018B30016F295 /* personal */ = {
-			isa = PBXGroup;
-			children = (
-				E734B5BD28F51E2C00F8B0FB /* PersonalView.swift */,
-			);
-			path = personal;
 			sourceTree = "<group>";
 		};
 		E726C27A28F018BC0016F295 /* message */ = {
@@ -181,9 +179,21 @@
 				E726C27428F0185A0016F295 /* TopicDetailModel.swift */,
 				E778359C28EA7C21003D3048 /* TopicModel.swift */,
 				E77835A228EA819D003D3048 /* AuthorModel.swift */,
-				E77835A028EA80AA003D3048 /* CnodeResponse.swift */,
+				E75D1B2F28F9483B00CEE595 /* UserModel.swift */,
+				E75D1B3328F9492900CEE595 /* RecentReplyModel.swift */,
+				E75D1B3528F9499800CEE595 /* CnodeResponseModel.swift */,
 			);
 			name = models;
+			sourceTree = "<group>";
+		};
+		E75D1B2A28F9456100CEE595 /* user */ = {
+			isa = PBXGroup;
+			children = (
+				E75D1B2D28F9459F00CEE595 /* UserPopoverView.swift */,
+				E75D1B3928F964D000CEE595 /* UserView.swift */,
+				E75D1B3B28F964E400CEE595 /* UserSheetView.swift */,
+			);
+			name = user;
 			sourceTree = "<group>";
 		};
 		E77835A428EAB8EB003D3048 /* topicList */ = {
@@ -202,7 +212,6 @@
 				E77835AA28EAC1FF003D3048 /* PreviewData.swift */,
 				E74C0D9328ED5D1800A9F622 /* DateTime.swift */,
 				E77835B328EC20C2003D3048 /* TopicTarget.swift */,
-				E77835B128EC0AFF003D3048 /* StaticButtonStyle.swift */,
 				E73E673028F4059C00D67B36 /* TabConstant.swift */,
 			);
 			path = utils;
@@ -262,11 +271,11 @@
 		E7FD4B5028E4487B004D8D12 /* views */ = {
 			isa = PBXGroup;
 			children = (
+				E75D1B2A28F9456100CEE595 /* user */,
 				E73E673228F40B9500D67B36 /* comment */,
 				E726C27C28F018D40016F295 /* topicDetail */,
 				E726C27B28F018C70016F295 /* setting */,
 				E726C27A28F018BC0016F295 /* message */,
-				E726C27928F018B30016F295 /* personal */,
 				E726C27828F018A60016F295 /* sidebar */,
 				E77835AC28EACA30003D3048 /* components */,
 				E77835A428EAB8EB003D3048 /* topicList */,
@@ -413,14 +422,13 @@
 				E7FD4B5428E44BC3004D8D12 /* TopicListView.swift in Sources */,
 				E74C0D9628ED77BD00A9F622 /* UserNameView.swift in Sources */,
 				E743B40B28E978A9001CD16C /* QcnoderApi.swift in Sources */,
-				E77835B228EC0B00003D3048 /* StaticButtonStyle.swift in Sources */,
+				E75D1B3A28F964D000CEE595 /* UserView.swift in Sources */,
 				E726C27528F0185A0016F295 /* TopicDetailModel.swift in Sources */,
 				E778359D28EA7C21003D3048 /* TopicModel.swift in Sources */,
 				E77835B028EACAD1003D3048 /* AvatarView.swift in Sources */,
 				E74C0D9428ED5D1800A9F622 /* DateTime.swift in Sources */,
 				E77835B428EC20C2003D3048 /* TopicTarget.swift in Sources */,
 				E77835A828EAB930003D3048 /* TopicListCellView.swift in Sources */,
-				E734B5BE28F51E2C00F8B0FB /* PersonalView.swift in Sources */,
 				E734B5B628F5096200F8B0FB /* ContentEditor.swift in Sources */,
 				E73E673128F4059C00D67B36 /* TabConstant.swift in Sources */,
 				E77835A328EA819D003D3048 /* AuthorModel.swift in Sources */,
@@ -428,12 +436,16 @@
 				E77835AB28EAC1FF003D3048 /* PreviewData.swift in Sources */,
 				E726C27728F0186F0016F295 /* ReplyModel.swift in Sources */,
 				E734B5C028F51EB800F8B0FB /* MessageView.swift in Sources */,
+				E75D1B3028F9483B00CEE595 /* UserModel.swift in Sources */,
 				E7FD4B2628E4478B004D8D12 /* qcnoderApp.swift in Sources */,
+				E75D1B3C28F964E400CEE595 /* UserSheetView.swift in Sources */,
 				E726C28028F019540016F295 /* CollectBtnView.swift in Sources */,
+				E75D1B3428F9492900CEE595 /* RecentReplyModel.swift in Sources */,
 				E726C27E28F018F50016F295 /* TopicDetailView.swift in Sources */,
 				E734B5C228F51EC800F8B0FB /* SettingView.swift in Sources */,
-				E77835A128EA80AA003D3048 /* CnodeResponse.swift in Sources */,
 				E7FD4B5228E449B7004D8D12 /* SidebarView.swift in Sources */,
+				E75D1B2E28F9459F00CEE595 /* UserPopoverView.swift in Sources */,
+				E75D1B3628F9499800CEE595 /* CnodeResponseModel.swift in Sources */,
 				E73E673628F40BBE00D67B36 /* CommentListCellView.swift in Sources */,
 				E726C28228F01A5C0016F295 /* TopicModel2Detail.swift in Sources */,
 			);
