@@ -48,7 +48,7 @@ struct TopicDetailView: View {
           
           Divider()
           if let content = topicDetail.content {
-            //![yuque_diagram.jpg](//static.cnodejs.org/FlRpbwKzQWfj6vKKPI7vRILJ7aqk)
+            // ![yuque_diagram.jpg](//static.cnodejs.org/FlRpbwKzQWfj6vKKPI7vRILJ7aqk)
             Markdown(content,
                      baseURL: URL(string: "https:"))
             .font(.body)

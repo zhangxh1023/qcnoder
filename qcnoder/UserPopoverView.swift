@@ -13,7 +13,7 @@ struct UserPopoverView: View {
   
   @State var user: UserModel?
   
-  @State var showUserSheet = false;
+  @EnvironmentObject private var globalState: GlobalState
   
   var body: some View {
     Group {
@@ -23,12 +23,12 @@ struct UserPopoverView: View {
           if let avatarUrl = user.avatarUrl {
             AsyncImage(url: URL(string: avatarUrl)) {image in
               image.resizable()
-                .frame(width: 100, height: 100)
+                .frame(width: 96, height: 96)
                 .scaledToFit()
                 .mask(RoundedRectangle(cornerRadius: 8))
             } placeholder: {
               Color.gray
-            }.frame(width: 100, height: 100)
+            }.frame(width: 96, height: 96)
           }
           
           Spacer()
@@ -61,13 +61,11 @@ struct UserPopoverView: View {
             
             Button(action: {
               print("click profile")
-              showUserSheet = true
+              globalState.showUserSheetView = true
+              globalState.user = user
             }, label: {
               Text("查看详细信息")
             })
-            .sheet(isPresented: $showUserSheet) {
-              UserSheetView()
-            }
             .padding(.top, 16)
             Spacer()
           }

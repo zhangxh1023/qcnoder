@@ -11,16 +11,23 @@ struct UserSheetView: View {
   
   @Environment(\.presentationMode) var mode
   
+  @EnvironmentObject private var globalState: GlobalState
+  
   var body: some View {
-    VStack {
-      Button(action: {
-        self.mode.wrappedValue.dismiss()
-      }, label: {
-        Text("退出详情页")
-      })
-      Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+    VStack(spacing: 0) {
+      UserView(user: globalState.user)
+      Divider()
+      HStack {
+        Spacer()
+        Button(action: {
+          self.mode.wrappedValue.dismiss()
+        }, label: {
+          Text("退出详情页")
+        })
+        .padding(10)
+      }
     }
-    .frame(width: 800, height: 400)
+    .frame(width: 900, height: 540)
   }
 }
 

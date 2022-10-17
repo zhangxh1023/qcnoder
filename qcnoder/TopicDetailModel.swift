@@ -63,6 +63,10 @@ public struct TopicDetailModel: Decodable {
     
   }
   
+  public init(id: String?) {
+    self.id = id
+  }
+  
   init() {
     
   }

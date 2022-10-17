@@ -9,7 +9,7 @@ import SwiftUI
 
 struct UserNameView: View {
   
-  let userName: String
+  let userName: String?
   
   @State private var showPopover = false;
   
@@ -17,7 +17,7 @@ struct UserNameView: View {
     Button(action: {
       showPopover = true
     }, label: {
-      Text(userName)
+      Text(userName ?? "")
         .font(.system(size: 12))
         .foregroundColor(.gray)
     })

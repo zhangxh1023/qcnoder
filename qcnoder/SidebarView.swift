@@ -24,7 +24,7 @@ struct SidebarView: View {
       }
       
       Section(header: Text("账户")) {
-        NavigationLink(destination: UserView()) {
+        NavigationLink(destination: UserView(user: nil)) {
           Label("个人", systemImage: "person.crop.circle")
         }
         NavigationLink(destination: MessageView()) {

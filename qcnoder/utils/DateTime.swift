@@ -15,7 +15,7 @@ public struct DateTime {
     }
     let dateFormatter = DateFormatter.init()
     dateFormatter.dateFormat = "yyyy-MM-dd'T'HH.mm.ss.SSSVV"
-    //2022-09-27T12:49:19.941Z
+    // 2022-09-27T12:49:19.941Z
     let beforeTime = dateFormatter.date(from: time)
     let calendar = Calendar.current
     let now = Date()

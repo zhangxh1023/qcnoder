@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct RecentReplyModel: Codable {
+struct RecentReplyModel: Identifiable, Codable {
 
   var id          : String? = nil
   var author      : AuthorModel? = AuthorModel()

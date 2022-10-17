@@ -9,12 +9,19 @@ import SwiftUI
 
 @main
 struct qcnoderApp: App {
+  
+  @StateObject var globalState = GlobalState()
+  
   var body: some Scene {
     WindowGroup {
       NavigationView{
         SidebarView()
       }
       .frame(minWidth: 1000, minHeight: 600)
+      .sheet(isPresented: $globalState.showUserSheetView) {
+        UserSheetView()
+      }
+      .environmentObject(globalState)
     }
   }
 }
