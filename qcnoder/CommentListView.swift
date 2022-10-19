@@ -15,13 +15,14 @@ struct CommentListView: View {
     if let topicDetail = topicDetail {
       if let replies = topicDetail.replies {
         if replies.count > 0 {
+          Divider()
           HStack {
             Text(String(format: "%d 回复", replies.count))
             Spacer()
           }
           .padding()
-          .background(.gray)
           .mask(RoundedRectangle(cornerRadius: 3))
+          Divider()
           
           ForEach(replies.indices, id: \.self) { index in
             if index > 0 {

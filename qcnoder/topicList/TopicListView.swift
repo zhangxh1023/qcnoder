@@ -25,7 +25,7 @@ struct TopicListView: View {
     NavigationView {
       if isLoading {
         ProgressView()
-          .frame(minWidth: 400)
+          .frame(minWidth: 350)
       } else {
         List {
           if let topics = topics {
@@ -42,7 +42,7 @@ struct TopicListView: View {
             }
           }
         }
-        .frame(width: 400)
+        .frame(minWidth: 350)
       }
     }
     .task {

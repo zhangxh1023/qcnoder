@@ -21,7 +21,7 @@ struct TopicDetailView: View {
   var body: some View {
     if let topicDetail = topicDetail {
       List {
-        VStack(alignment: .leading, spacing: 5) {
+        VStack(alignment: .leading, spacing: 0) {
           Text(topicDetail.title ?? "")
             .font(.title)
           
@@ -45,6 +45,7 @@ struct TopicDetailView: View {
                            topicId: topicDetail.id,
                            isCollect: topicDetail.isCollect ?? false)
           }
+          .padding(EdgeInsets(top: 5, leading: 0, bottom: 5, trailing: 0))
           
           Divider()
           if let content = topicDetail.content {
@@ -64,13 +65,14 @@ struct TopicDetailView: View {
             )
           }
           
+          Divider()
           HStack {
             Text("添加回复")
             Spacer()
           }
           .padding()
-          .background(.gray)
           .mask(RoundedRectangle(cornerRadius: 3))
+          
           ContentEditor(content: $replyContent)
           Button(action: {
             print("click reply btn")

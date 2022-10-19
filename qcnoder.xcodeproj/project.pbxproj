@@ -35,6 +35,8 @@
 		E77835AB28EAC1FF003D3048 /* PreviewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E77835AA28EAC1FF003D3048 /* PreviewData.swift */; };
 		E77835B028EACAD1003D3048 /* AvatarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E77835AF28EACAD1003D3048 /* AvatarView.swift */; };
 		E77835B428EC20C2003D3048 /* TopicTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = E77835B328EC20C2003D3048 /* TopicTarget.swift */; };
+		E7EB385228FE7A3C005B9870 /* CurrentUserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EB385128FE7A3C005B9870 /* CurrentUserView.swift */; };
+		E7EB385628FE80FB005B9870 /* VerifyAccesstokenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EB385528FE80FB005B9870 /* VerifyAccesstokenModel.swift */; };
 		E7FD4B2628E4478B004D8D12 /* qcnoderApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7FD4B2528E4478B004D8D12 /* qcnoderApp.swift */; };
 		E7FD4B2A28E4478E004D8D12 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E7FD4B2928E4478E004D8D12 /* Assets.xcassets */; };
 		E7FD4B2D28E4478E004D8D12 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E7FD4B2C28E4478E004D8D12 /* Preview Assets.xcassets */; };
@@ -87,6 +89,8 @@
 		E77835AA28EAC1FF003D3048 /* PreviewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewData.swift; sourceTree = "<group>"; };
 		E77835AF28EACAD1003D3048 /* AvatarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarView.swift; sourceTree = "<group>"; };
 		E77835B328EC20C2003D3048 /* TopicTarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicTarget.swift; sourceTree = "<group>"; };
+		E7EB385128FE7A3C005B9870 /* CurrentUserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentUserView.swift; sourceTree = "<group>"; };
+		E7EB385528FE80FB005B9870 /* VerifyAccesstokenModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyAccesstokenModel.swift; sourceTree = "<group>"; };
 		E7FD4B2228E4478B004D8D12 /* qcnoder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = qcnoder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7FD4B2528E4478B004D8D12 /* qcnoderApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = qcnoderApp.swift; sourceTree = "<group>"; };
 		E7FD4B2928E4478E004D8D12 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -184,6 +188,7 @@
 				E75D1B2F28F9483B00CEE595 /* UserModel.swift */,
 				E75D1B3328F9492900CEE595 /* RecentReplyModel.swift */,
 				E75D1B3528F9499800CEE595 /* CnodeResponseModel.swift */,
+				E7EB385528FE80FB005B9870 /* VerifyAccesstokenModel.swift */,
 			);
 			name = models;
 			sourceTree = "<group>";
@@ -194,6 +199,7 @@
 				E75D1B2D28F9459F00CEE595 /* UserPopoverView.swift */,
 				E75D1B3928F964D000CEE595 /* UserView.swift */,
 				E75D1B3B28F964E400CEE595 /* UserSheetView.swift */,
+				E7EB385128FE7A3C005B9870 /* CurrentUserView.swift */,
 			);
 			name = user;
 			sourceTree = "<group>";
@@ -438,6 +444,8 @@
 				E73E673428F40BB100D67B36 /* CommentListView.swift in Sources */,
 				E77835AB28EAC1FF003D3048 /* PreviewData.swift in Sources */,
 				E726C27728F0186F0016F295 /* ReplyModel.swift in Sources */,
+				E7EB385228FE7A3C005B9870 /* CurrentUserView.swift in Sources */,
+				E7EB385628FE80FB005B9870 /* VerifyAccesstokenModel.swift in Sources */,
 				E734B5C028F51EB800F8B0FB /* MessageView.swift in Sources */,
 				E75D1B3028F9483B00CEE595 /* UserModel.swift in Sources */,
 				E7FD4B2628E4478B004D8D12 /* qcnoderApp.swift in Sources */,

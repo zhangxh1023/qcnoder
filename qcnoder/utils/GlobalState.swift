@@ -11,6 +11,12 @@ class GlobalState: ObservableObject {
   
   @Published var showUserSheetView = false
   
-  @Published var user: UserModel?
+  @Published var sheetUser: UserModel?
+  
+  @Published var accesstoken: String? {
+    didSet {
+      api.accesstoken = accesstoken
+    }
+  }
   
 }

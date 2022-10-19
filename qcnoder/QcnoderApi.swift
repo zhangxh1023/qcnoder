@@ -102,4 +102,16 @@ public struct QcnoderApi {
     return data
   }
   
+  /**
+   验证 accessToken 的正确性
+   */
+  public func verifyAccesstoken() async throws -> CnodeResponseModel<VerifyAccesstokenModel>? {
+    let (data, _) = try await request(
+      httpMethod: "POST",
+      url: remoteUrl + "/accesstoken",
+      decodeClass: CnodeResponseModel<VerifyAccesstokenModel>.self
+    )
+    return data
+  }
+
 }

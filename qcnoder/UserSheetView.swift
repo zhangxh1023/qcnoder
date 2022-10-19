@@ -15,7 +15,7 @@ struct UserSheetView: View {
   
   var body: some View {
     VStack(spacing: 0) {
-      UserView(user: globalState.user)
+      UserView(user: globalState.sheetUser)
       Divider()
       HStack {
         Spacer()

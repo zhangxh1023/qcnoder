@@ -62,7 +62,7 @@ struct UserPopoverView: View {
             Button(action: {
               print("click profile")
               globalState.showUserSheetView = true
-              globalState.user = user
+              globalState.sheetUser = user
             }, label: {
               Text("查看详细信息")
             })
