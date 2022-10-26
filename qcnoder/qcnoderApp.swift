@@ -7,6 +7,8 @@
 
 import SwiftUI
 
+var api = QcnoderApi()
+
 @main
 struct qcnoderApp: App {
   

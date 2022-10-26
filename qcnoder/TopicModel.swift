@@ -7,7 +7,7 @@
 
 import Foundation
 
-public struct TopicModel: Identifiable, Decodable {
+public struct TopicModel: Identifiable, Codable {
   
   public var id          : String? = nil
   var authorId    : String? = nil

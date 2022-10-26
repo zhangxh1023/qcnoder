@@ -36,10 +36,6 @@ public struct QcnoderApi {
     request.httpMethod = httpMethod
     request.addValue("application/json", forHTTPHeaderField: "Content-Type")
     
-    if let accessToken = accesstoken {
-      request.setValue("Bearer " + accessToken, forHTTPHeaderField: "Authorization")
-    }
-    
     if httpMethod == "POST" && args != nil{
       request.httpBody = try? JSONSerialization.data(withJSONObject: args as Any)
     }
@@ -105,11 +101,32 @@ public struct QcnoderApi {
   /**
    验证 accessToken 的正确性
    */
-  public func verifyAccesstoken() async throws -> CnodeResponseModel<VerifyAccesstokenModel>? {
+  public func verifyAccesstoken() async throws -> VerifyAccesstokenModel? {
+    var args: [String: Any] = [:];
+    if let accesstoken = accesstoken {
+      args["accesstoken"] = accesstoken
+    }
     let (data, _) = try await request(
       httpMethod: "POST",
       url: remoteUrl + "/accesstoken",
-      decodeClass: CnodeResponseModel<VerifyAccesstokenModel>.self
+      args: args,
+      decodeClass: VerifyAccesstokenModel.self
+    )
+    return data
+  }
+  
+  /**
+   获取已读和未读消息
+   */
+  public func getMessage() async throws -> CnodeResponseModel<MessageModel>? {
+    var args: [String: Any] = ["mdrender" : false];
+    if let accesstoken = accesstoken {
+      args["accesstoken"] = accesstoken
+    }
+    let (data, _) = try await request(
+      url: remoteUrl + "/messages",
+      args: args,
+      decodeClass: CnodeResponseModel<MessageModel>.self
     )
     return data
   }

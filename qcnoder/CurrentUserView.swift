@@ -18,22 +18,28 @@ struct CurrentUserView: View {
   @State private var isLoading = false
   
   var body: some View {
-    if let user = user {
-      UserView(user: user)
+    if isLoading {
+      ProgressView()
     } else {
-      if let _ = globalState.accesstoken {
-        task {
-          fetchUser()
-        }
+      if let user = user {
+        UserView(user: user)
       } else {
-        TextField("accesstoken", text: $inputAccesstoken)
-          .padding()
-        Button(action: {
-          globalState.accesstoken = inputAccesstoken
-          fetchUser()
-        }, label: {
-          Text("登录")
-        })
+        if let _ = globalState.accesstoken {
+          ProgressView()
+            .task {
+              fetchUser()
+            }
+        } else {
+          TextField("accesstoken", text: $inputAccesstoken)
+            .padding()
+            .frame(width: 300)
+          Button(action: {
+            globalState.accesstoken = inputAccesstoken
+            fetchUser()
+          }, label: {
+            Text("登录")
+          })
+        }
       }
     }
   }
@@ -42,12 +48,12 @@ struct CurrentUserView: View {
     isLoading = true
     Task {
       let verifyData = try await api.verifyAccesstoken()
-      if let loginname = verifyData?.data?.loginname {
+      if let loginname = verifyData?.loginname {
         let userData = try await api.getUser(loginname: loginname)
         user = userData?.data
       }
+      isLoading = false
     }
-    isLoading = false
   }
 }
 

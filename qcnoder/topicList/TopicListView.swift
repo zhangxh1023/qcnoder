@@ -7,8 +7,6 @@
 
 import SwiftUI
 
-var api = QcnoderApi()
-
 struct TopicListView: View {
   
   let pageLimit = 20

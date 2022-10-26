@@ -7,7 +7,7 @@
 
 import Foundation
 
-public struct ReplyModel: Identifiable, Decodable {
+public struct ReplyModel: Identifiable, Codable {
   
   public var id       : String?   = nil
   var author   : AuthorModel? = AuthorModel()
