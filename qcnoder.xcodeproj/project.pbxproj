@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		E7137557290BD499002524A9 /* MessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7137556290BD499002524A9 /* MessageCell.swift */; };
+		E7137559290BDA73002524A9 /* MessageList.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7137558290BDA73002524A9 /* MessageList.swift */; };
 		E726C27328F0183C0016F295 /* MarkdownUI in Frameworks */ = {isa = PBXBuildFile; productRef = E726C27228F0183C0016F295 /* MarkdownUI */; };
 		E726C27528F0185A0016F295 /* TopicDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E726C27428F0185A0016F295 /* TopicDetailModel.swift */; };
 		E726C27728F0186F0016F295 /* ReplyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E726C27628F0186F0016F295 /* ReplyModel.swift */; };
@@ -64,7 +64,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		E7137556290BD499002524A9 /* MessageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageCell.swift; sourceTree = "<group>"; };
+		E7137558290BDA73002524A9 /* MessageList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageList.swift; sourceTree = "<group>"; };
 		E726C27428F0185A0016F295 /* TopicDetailModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopicDetailModel.swift; sourceTree = "<group>"; };
 		E726C27628F0186F0016F295 /* ReplyModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReplyModel.swift; sourceTree = "<group>"; };
 		E726C27D28F018F50016F295 /* TopicDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopicDetailView.swift; sourceTree = "<group>"; };
@@ -144,7 +144,7 @@
 			isa = PBXGroup;
 			children = (
 				E734B5BF28F51EB800F8B0FB /* MessageView.swift */,
-				E7137556290BD499002524A9 /* MessageCell.swift */,
+				E7137558290BDA73002524A9 /* MessageList.swift */,
 			);
 			name = message;
 			sourceTree = "<group>";
@@ -439,6 +439,7 @@
 				E743B40B28E978A9001CD16C /* QcnoderApi.swift in Sources */,
 				E75D1B3A28F964D000CEE595 /* UserView.swift in Sources */,
 				E726C27528F0185A0016F295 /* TopicDetailModel.swift in Sources */,
+				E7137559290BDA73002524A9 /* MessageList.swift in Sources */,
 				E778359D28EA7C21003D3048 /* TopicModel.swift in Sources */,
 				E77835B028EACAD1003D3048 /* AvatarView.swift in Sources */,
 				E74C0D9428ED5D1800A9F622 /* DateTime.swift in Sources */,
@@ -447,7 +448,6 @@
 				E734B5B628F5096200F8B0FB /* ContentEditor.swift in Sources */,
 				E73E673128F4059C00D67B36 /* TabConstant.swift in Sources */,
 				E77835A328EA819D003D3048 /* AuthorModel.swift in Sources */,
-				E7137557290BD499002524A9 /* MessageCell.swift in Sources */,
 				E73E673428F40BB100D67B36 /* CommentListView.swift in Sources */,
 				E77835AB28EAC1FF003D3048 /* PreviewData.swift in Sources */,
 				E726C27728F0186F0016F295 /* ReplyModel.swift in Sources */,

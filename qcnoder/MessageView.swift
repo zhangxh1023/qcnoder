@@ -26,24 +26,29 @@ struct MessageView: View {
               Divider()
               HStack {
                 Text("新消息")
+                  .font(.title3)
                 Spacer()
               }
               .padding()
               .mask(RoundedRectangle(cornerRadius: 3))
               Divider()
               
-              MessageCell(list: message?.hasnotReadMessages)
+              MessageList(list: message?.hasnotReadMessages)
+              
+              Spacer()
+                .frame(height: 30)
               
               Divider()
               HStack {
                 Text("过往消息")
+                  .font(.title3)
                 Spacer()
               }
               .padding()
               .mask(RoundedRectangle(cornerRadius: 3))
               Divider()
               
-              MessageCell(list: message?.hasReadMessages)
+              MessageList(list: message?.hasReadMessages)
             }
           }
         }
