@@ -26,7 +26,6 @@ struct MessageList: View {
           Text("中\(item.type == "at" ? "@" : "回复")了你")
         }
         .padding()
-        Divider()
       }
     } else {
       HStack {
@@ -34,7 +33,6 @@ struct MessageList: View {
         Spacer()
       }
       .padding()
-      Divider()
     }
   }
 }
