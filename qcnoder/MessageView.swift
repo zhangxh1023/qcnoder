@@ -22,17 +22,28 @@ struct MessageView: View {
           ProgressView()
         } else {
           List {
-            Text("新消息")
-            if let notRead = message?.hasnotReadMessages {
-              ForEach(notRead) {item in
-                Text("\(item.author?.loginname ?? "")在话题\(item.topic?.title ?? "")中\(item.type == "at" ? "@" : "回复")了你");
+            VStack (alignment: .leading, spacing: 0) {
+              Divider()
+              HStack {
+                Text("新消息")
+                Spacer()
               }
-            }
-            Text("过往消息")
-            if let read = message?.hasReadMessages {
-              ForEach(read) {item in
-                Text("\(item.author?.loginname ?? "")在话题\(item.topic?.title ?? "")中\(item.type == "at" ? "@" : "回复")了你");
+              .padding()
+              .mask(RoundedRectangle(cornerRadius: 3))
+              Divider()
+              
+              MessageCell(list: message?.hasnotReadMessages)
+              
+              Divider()
+              HStack {
+                Text("过往消息")
+                Spacer()
               }
+              .padding()
+              .mask(RoundedRectangle(cornerRadius: 3))
+              Divider()
+              
+              MessageCell(list: message?.hasReadMessages)
             }
           }
         }
