@@ -30,7 +30,6 @@ struct MessageView: View {
                 Spacer()
               }
               .padding()
-              .mask(RoundedRectangle(cornerRadius: 3))
               Divider()
               
               MessageList(list: message?.hasnotReadMessages)
@@ -45,7 +44,6 @@ struct MessageView: View {
                 Spacer()
               }
               .padding()
-              .mask(RoundedRectangle(cornerRadius: 3))
               Divider()
               
               MessageList(list: message?.hasReadMessages)
