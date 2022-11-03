@@ -70,7 +70,7 @@ public struct QcnoderApi {
   }
   
   /**
-    获取主题详情
+   获取主题详情
    */
   public func getTopicDetail(id: String) async throws -> CnodeResponseModel<TopicDetailModel>? {
     var args: [String: Any] = [
@@ -88,7 +88,7 @@ public struct QcnoderApi {
   }
   
   /**
-    获取用户信息
+   获取用户信息
    */
   public func getUser(loginname: String) async throws -> CnodeResponseModel<UserModel>? {
     let (data, _) = try await request(
@@ -130,5 +130,37 @@ public struct QcnoderApi {
     )
     return data
   }
-
+  
+  public func createTopic(title: String, tab: String, content: String) async throws -> TopicRespModel? {
+    var args: [String: Any] = [
+      "title": title,
+      "tab": tab,
+      "content": content
+    ]
+    if let accesstoken = accesstoken {
+      args["accesstoken"] = accesstoken
+    }
+    let (data, _) = try await request(
+      httpMethod: "POST",
+      url: remoteUrl + "/topics",
+      args: args,
+      decodeClass: TopicRespModel.self
+    )
+    return data
+  }
+  
+  public func toggleUps(replyId: String) async throws -> UpsRespModel? {
+    var args: [String: Any] = [:];
+    if let accesstoken = accesstoken {
+      args["accesstoken"] = accesstoken
+    }
+    let (data, _) = try await request(
+      httpMethod: "POST",
+      url: "\(remoteUrl)/reply/\(replyId)/ups",
+      args: args,
+      decodeClass: UpsRespModel.self
+    )
+    return data
+  }
+  
 }

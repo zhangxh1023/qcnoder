@@ -34,19 +34,7 @@ struct CommentListCellView: View {
           
           Spacer()
           
-          if let upCnt = reply.ups?.count {
-            if upCnt > 0 {
-              HStack(spacing: 0) {
-                Button(action: {
-                  print("click up")
-                }, label: {
-                  Image(systemName: "hand.thumbsup")
-                })
-                .buttonStyle(BorderlessButtonStyle())
-                Text(String(reply.ups?.count ?? 0))
-              }
-            }
-          }
+          UpsView(reply: reply)
         }
         Markdown(reply.content ?? "",
                  baseURL: URL(string: "https:"))
@@ -55,6 +43,7 @@ struct CommentListCellView: View {
       }
     }
   }
+  
 }
 
 struct CommentListCellView_Previews: PreviewProvider {
