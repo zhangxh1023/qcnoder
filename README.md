@@ -1,3 +1,3 @@
 # qcnoder
 
-[cnodejs.org](https://markdown.com.cn) client for macOS
+[cnodejs.org](https://cnodejs.org) client for macOS
