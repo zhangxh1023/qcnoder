@@ -47,6 +47,8 @@
 		E7FD4B2D28E4478E004D8D12 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E7FD4B2C28E4478E004D8D12 /* Preview Assets.xcassets */; };
 		E7FD4B5228E449B7004D8D12 /* SidebarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7FD4B5128E449B7004D8D12 /* SidebarView.swift */; };
 		E7FD4B5428E44BC3004D8D12 /* TopicListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7FD4B5328E44BC3004D8D12 /* TopicListView.swift */; };
+		E7FE3ED4291A48EE00B38C73 /* ReplyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7FE3ED3291A48EE00B38C73 /* ReplyViewModel.swift */; };
+		E7FE3ED6291A495D00B38C73 /* ExReplyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7FE3ED5291A495D00B38C73 /* ExReplyModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -110,6 +112,8 @@
 		E7FD4B3D28E4478F004D8D12 /* qcnoderUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = qcnoderUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7FD4B5128E449B7004D8D12 /* SidebarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SidebarView.swift; sourceTree = "<group>"; };
 		E7FD4B5328E44BC3004D8D12 /* TopicListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicListView.swift; sourceTree = "<group>"; };
+		E7FE3ED3291A48EE00B38C73 /* ReplyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReplyViewModel.swift; sourceTree = "<group>"; };
+		E7FE3ED5291A495D00B38C73 /* ExReplyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExReplyModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -243,6 +247,8 @@
 				E77835B328EC20C2003D3048 /* TopicTarget.swift */,
 				E73E673028F4059C00D67B36 /* TabConstant.swift */,
 				E739405328FD2E42004EA24E /* GlobalState.swift */,
+				E7FE3ED3291A48EE00B38C73 /* ReplyViewModel.swift */,
+				E7FE3ED5291A495D00B38C73 /* ExReplyModel.swift */,
 			);
 			path = utils;
 			sourceTree = "<group>";
@@ -281,6 +287,7 @@
 		E7FD4B2428E4478B004D8D12 /* qcnoder */ = {
 			isa = PBXGroup;
 			children = (
+				E7FE3ECE291A3B6500B38C73 /* constants */,
 				E77835A928EAC1E3003D3048 /* utils */,
 				E743B40728E976C1001CD16C /* api */,
 				E7FD4B5028E4487B004D8D12 /* views */,
@@ -313,6 +320,13 @@
 				E77835A428EAB8EB003D3048 /* topicList */,
 			);
 			name = views;
+			sourceTree = "<group>";
+		};
+		E7FE3ECE291A3B6500B38C73 /* constants */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = constants;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -472,6 +486,7 @@
 				E726C27728F0186F0016F295 /* ReplyModel.swift in Sources */,
 				E7EB385228FE7A3C005B9870 /* CurrentUserView.swift in Sources */,
 				E7EB385628FE80FB005B9870 /* VerifyAccesstokenModel.swift in Sources */,
+				E7FE3ED6291A495D00B38C73 /* ExReplyModel.swift in Sources */,
 				E734B5C028F51EB800F8B0FB /* MessageView.swift in Sources */,
 				E7E1EB6A29092D3C00AD0B1D /* MessageModel.swift in Sources */,
 				E75D1B3028F9483B00CEE595 /* UserModel.swift in Sources */,
@@ -480,6 +495,7 @@
 				E75D1B3C28F964E400CEE595 /* UserSheetView.swift in Sources */,
 				E726C28028F019540016F295 /* CollectBtnView.swift in Sources */,
 				E75D1B3428F9492900CEE595 /* RecentReplyModel.swift in Sources */,
+				E7FE3ED4291A48EE00B38C73 /* ReplyViewModel.swift in Sources */,
 				E726C27E28F018F50016F295 /* TopicDetailView.swift in Sources */,
 				E734B5C228F51EC800F8B0FB /* SettingView.swift in Sources */,
 				E7FD4B5228E449B7004D8D12 /* SidebarView.swift in Sources */,

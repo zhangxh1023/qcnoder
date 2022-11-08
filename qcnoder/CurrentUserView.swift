@@ -48,6 +48,7 @@ struct CurrentUserView: View {
     isLoading = true
     Task {
       let verifyData = try await api.verifyAccesstoken()
+      globalState.user = verifyData
       if let loginname = verifyData?.loginname {
         let userData = try await api.getUser(loginname: loginname)
         user = userData?.data

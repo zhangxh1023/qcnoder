@@ -19,6 +19,6 @@ class GlobalState: ObservableObject {
     }
   }
   
-  @Published var user: UserModel?
+  @Published var user: VerifyAccesstokenModel?
   
 }

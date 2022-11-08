@@ -14,6 +14,8 @@ struct CommentListCellView: View {
   
   let index: Int?
   
+  @State private var isHover: Bool = false
+  
   var body: some View {
     if let reply = reply {
       VStack(alignment: .leading) {
@@ -34,12 +36,15 @@ struct CommentListCellView: View {
           
           Spacer()
           
-          UpsView(reply: reply)
+          UpsView(replyView: ReplyViewModel(reply: reply), isHover: $isHover)
         }
         Markdown(reply.content ?? "",
                  baseURL: URL(string: "https:"))
         .font(.body)
         .fixedSize(horizontal: false, vertical: true)
+      }
+      .onHover { hover in
+        self.isHover = hover
       }
     }
   }

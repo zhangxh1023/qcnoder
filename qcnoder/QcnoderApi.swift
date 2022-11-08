@@ -131,6 +131,9 @@ public struct QcnoderApi {
     return data
   }
   
+  /**
+    新建主题
+   */
   public func createTopic(title: String, tab: String, content: String) async throws -> TopicRespModel? {
     var args: [String: Any] = [
       "title": title,
@@ -149,6 +152,9 @@ public struct QcnoderApi {
     return data
   }
   
+  /**
+   点赞/取消点赞
+   */
   public func toggleUps(replyId: String) async throws -> UpsRespModel? {
     var args: [String: Any] = [:];
     if let accesstoken = accesstoken {
