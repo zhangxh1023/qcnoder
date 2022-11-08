@@ -1,3 +1,3 @@
 # qcnoder
 
-[cnodejs.org](https://markdown.com.cn) macOS native client by swiftUI
+[cnodejs.org](https://markdown.com.cn) client for macOS
