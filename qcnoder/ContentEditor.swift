@@ -23,7 +23,7 @@ struct ContentEditor: View {
           print("click eye")
           isPreview = !isPreview
         }, label: {
-          Image(systemName: "eye")
+          Image(systemName: isPreview ? "eye.fill" : "eye")
         })
         .buttonStyle(BorderlessButtonStyle())
       }

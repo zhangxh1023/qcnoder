@@ -27,7 +27,7 @@ struct UpsView: View {
         upButton
         Text(String(reply.ups?.count ?? 0))
       }
-    } else {
+    } else if globalState.accesstoken != nil {
       if isHover {
         upButton
       }

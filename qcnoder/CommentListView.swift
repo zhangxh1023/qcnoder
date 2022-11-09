@@ -29,10 +29,12 @@ struct CommentListView: View {
               Divider()
             }
             CommentListCellView(
+              topicAuthorName: topicDetail.author?.loginname ?? "",
               reply: replies[index],
-              index: index + 1
+              index: index + 1,
+              topicId: topicDetail.id
             )
-              .padding()
+            .padding()
           }
         }
       }

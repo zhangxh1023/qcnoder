@@ -40,6 +40,7 @@
 		E7DEDA0D2913B69000FB7499 /* UpsRespModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7DEDA0C2913B69000FB7499 /* UpsRespModel.swift */; };
 		E7DEDA0F2913B89700FB7499 /* UpsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7DEDA0E2913B89700FB7499 /* UpsView.swift */; };
 		E7E1EB6A29092D3C00AD0B1D /* MessageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7E1EB6929092D3C00AD0B1D /* MessageModel.swift */; };
+		E7EAFBF9291B489F00124796 /* ReplyRespModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EAFBF8291B489F00124796 /* ReplyRespModel.swift */; };
 		E7EB385228FE7A3C005B9870 /* CurrentUserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EB385128FE7A3C005B9870 /* CurrentUserView.swift */; };
 		E7EB385628FE80FB005B9870 /* VerifyAccesstokenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EB385528FE80FB005B9870 /* VerifyAccesstokenModel.swift */; };
 		E7FD4B2628E4478B004D8D12 /* qcnoderApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7FD4B2528E4478B004D8D12 /* qcnoderApp.swift */; };
@@ -101,6 +102,7 @@
 		E7DEDA0C2913B69000FB7499 /* UpsRespModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpsRespModel.swift; sourceTree = "<group>"; };
 		E7DEDA0E2913B89700FB7499 /* UpsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpsView.swift; sourceTree = "<group>"; };
 		E7E1EB6929092D3C00AD0B1D /* MessageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageModel.swift; sourceTree = "<group>"; };
+		E7EAFBF8291B489F00124796 /* ReplyRespModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReplyRespModel.swift; sourceTree = "<group>"; };
 		E7EB385128FE7A3C005B9870 /* CurrentUserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentUserView.swift; sourceTree = "<group>"; };
 		E7EB385528FE80FB005B9870 /* VerifyAccesstokenModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyAccesstokenModel.swift; sourceTree = "<group>"; };
 		E7FD4B2228E4478B004D8D12 /* qcnoder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = qcnoder.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -207,6 +209,7 @@
 				E7E1EB6929092D3C00AD0B1D /* MessageModel.swift */,
 				E7DEDA0A2913B29D00FB7499 /* TopicRespModel.swift */,
 				E7DEDA0C2913B69000FB7499 /* UpsRespModel.swift */,
+				E7EAFBF8291B489F00124796 /* ReplyRespModel.swift */,
 			);
 			name = models;
 			sourceTree = "<group>";
@@ -487,6 +490,7 @@
 				E7EB385228FE7A3C005B9870 /* CurrentUserView.swift in Sources */,
 				E7EB385628FE80FB005B9870 /* VerifyAccesstokenModel.swift in Sources */,
 				E7FE3ED6291A495D00B38C73 /* ExReplyModel.swift in Sources */,
+				E7EAFBF9291B489F00124796 /* ReplyRespModel.swift in Sources */,
 				E734B5C028F51EB800F8B0FB /* MessageView.swift in Sources */,
 				E7E1EB6A29092D3C00AD0B1D /* MessageModel.swift in Sources */,
 				E75D1B3028F9483B00CEE595 /* UserModel.swift in Sources */,

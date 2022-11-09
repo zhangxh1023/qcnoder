@@ -12,11 +12,13 @@ let accesstoken = ""
 
 struct TopicDetailView: View {
   
+  @EnvironmentObject private var globalState: GlobalState
+  
   @State var topicDetail: TopicDetailModel?
   
-  @State var isLoading = true
-  
   @State var replyContent = ""
+  
+  @State var isReplying = false
   
   var body: some View {
     if let topicDetail = topicDetail {
@@ -57,33 +59,34 @@ struct TopicDetailView: View {
             .padding()
           }
           
-          if isLoading {
-            ProgressView()
-          } else {
-            CommentListView(
-              topicDetail: topicDetail
-            )
-          }
+          CommentListView(
+            topicDetail: topicDetail
+          )
           
-          Divider()
-          HStack {
-            Text("添加回复")
-            Spacer()
+          if globalState.accesstoken != nil {
+            Divider()
+            HStack {
+              Text("添加回复")
+              Spacer()
+            }
+            .padding()
+            .mask(RoundedRectangle(cornerRadius: 3))
+            
+            ContentEditor(content: $replyContent)
+            Button(action: {
+              if !isReplying {
+                print("click reply btn")
+                createReply()
+              }
+            }, label: {
+              Text("回复")
+                .frame(width: 50, height: 30)
+                .foregroundColor(isReplying ? .black : .white)
+                .background(isReplying ? .gray : .blue)
+                .mask(RoundedRectangle(cornerRadius: 3))
+            })
+            .buttonStyle(BorderlessButtonStyle())
           }
-          .padding()
-          .mask(RoundedRectangle(cornerRadius: 3))
-          
-          ContentEditor(content: $replyContent)
-          Button(action: {
-            print("click reply btn")
-          }, label: {
-            Text("回复")
-              .frame(width: 50, height: 30)
-              .foregroundColor(.white)
-              .background(.blue)
-              .mask(RoundedRectangle(cornerRadius: 3))
-          })
-          .buttonStyle(BorderlessButtonStyle())
         }
       }
       .task{
@@ -93,7 +96,6 @@ struct TopicDetailView: View {
   }
   
   func loadData() async {
-    isLoading = true
     if let topicDetail = topicDetail {
       if let id = topicDetail.id {
         do {
@@ -106,13 +108,29 @@ struct TopicDetailView: View {
         }
       }
     }
-    isLoading = false
+  }
+  
+  func createReply() {
+    isReplying = true
+    Task {
+      if let topicId = topicDetail?.id {
+        do {
+          let data = try await api.createReply(topicId: topicId, content: replyContent, replyId: nil)
+          if let success = data?.success, success {
+            replyContent = ""
+            await loadData()
+          }
+        } catch {
+          
+        }
+      }
+      isReplying = false
+    }
   }
 }
 
 struct TopicDetailView_Previews: PreviewProvider {
   static var previews: some View {
-    
     TopicDetailView(
       topicDetail: PreviewData.getTopicDetail()
     )

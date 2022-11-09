@@ -132,7 +132,7 @@ public struct QcnoderApi {
   }
   
   /**
-    新建主题
+   新建主题
    */
   public func createTopic(title: String, tab: String, content: String) async throws -> TopicRespModel? {
     var args: [String: Any] = [
@@ -165,6 +165,27 @@ public struct QcnoderApi {
       url: "\(remoteUrl)/reply/\(replyId)/ups",
       args: args,
       decodeClass: UpsRespModel.self
+    )
+    return data
+  }
+  
+  /**
+   新建评论
+   */
+  public func createReply(topicId: String, content: String, replyId: String?) async throws -> ReplyRespModel? {
+    var args: [String: Any] = [:];
+    if let accesstoken = accesstoken {
+      args["accesstoken"] = accesstoken
+    }
+    if let replyId = replyId {
+      args["reply_id"] = replyId
+    }
+    args["content"] = content
+    let (data, _) = try await request(
+      httpMethod: "POST",
+      url: "\(remoteUrl)/topic/\(topicId)/replies",
+      args: args,
+      decodeClass: ReplyRespModel.self
     )
     return data
   }
