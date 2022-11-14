@@ -134,7 +134,7 @@ public struct QcnoderApi {
   /**
    新建主题
    */
-  public func createTopic(title: String, tab: String, content: String) async throws -> TopicRespModel? {
+  public func createTopic(tab: String, title: String, content: String) async throws -> TopicRespModel? {
     var args: [String: Any] = [
       "title": title,
       "tab": tab,
@@ -162,7 +162,7 @@ public struct QcnoderApi {
     }
     let (data, _) = try await request(
       httpMethod: "POST",
-      url: "\(remoteUrl)/reply/\(replyId)/ups",
+      url: remoteUrl + "/reply/\(replyId)/ups",
       args: args,
       decodeClass: UpsRespModel.self
     )
@@ -183,9 +183,56 @@ public struct QcnoderApi {
     args["content"] = content
     let (data, _) = try await request(
       httpMethod: "POST",
-      url: "\(remoteUrl)/topic/\(topicId)/replies",
+      url: remoteUrl + "/topic/\(topicId)/replies",
       args: args,
       decodeClass: ReplyRespModel.self
+    )
+    return data
+  }
+  
+  /**
+   获取收藏的主题
+   */
+  public func getTopicCollect(loginname: String) async throws -> CnodeResponseModel<[TopicModel]>? {
+    let (data, _) = try await request(
+      httpMethod: "GET",
+      url: remoteUrl + "/topic_collect/\(loginname)",
+      args: nil,
+      decodeClass: CnodeResponseModel<[TopicModel]>.self
+    )
+    return data
+  }
+  
+  /**
+   收藏主题
+   */
+  public func collectTopic(_ topicId: String) async throws -> SuccessModel? {
+    var args = ["topic_id": topicId]
+    if let accesstoken = accesstoken {
+      args["accesstoken"] = accesstoken
+    }
+    let (data, _) = try await request(
+      httpMethod: "POST",
+      url: remoteUrl + "/topic_collect/collect",
+      args: args,
+      decodeClass: SuccessModel.self
+    )
+    return data
+  }
+  
+  /**
+   取消收藏主题
+   */
+  public func decollectTopic(_ topicId: String) async throws -> SuccessModel? {
+    var args = ["topic_id": topicId]
+    if let accesstoken = accesstoken {
+      args["accesstoken"] = accesstoken
+    }
+    let (data, _) = try await request(
+      httpMethod: "POST",
+      url: remoteUrl + "/topic_collect/de_collect",
+      args: args,
+      decodeClass: SuccessModel.self
     )
     return data
   }

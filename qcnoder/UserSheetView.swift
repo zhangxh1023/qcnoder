@@ -28,6 +28,13 @@ struct UserSheetView: View {
       }
     }
     .frame(width: 900, height: 540)
+    .alert("提示",
+           isPresented: $globalState.isUserSheetAlert,
+           presenting: globalState.userSheetAlertText)
+    { _ in
+    } message: { alertText in
+      Text(alertText)
+    }
   }
 }
 

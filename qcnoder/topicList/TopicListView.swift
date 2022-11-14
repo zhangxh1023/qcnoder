@@ -11,13 +11,13 @@ struct TopicListView: View {
   
   let pageLimit = 20
   
-  var topicTab: String
   var page = 1
   
-  @State var isLoading = true;
-  @State var topics: [TopicModel]?
+  var tab: String?
   
-  @State var load = false
+  @State var isLoading = false;
+  
+  @State var topics: [TopicModel]?
   
   var body: some View {
     NavigationView {
@@ -44,27 +44,28 @@ struct TopicListView: View {
       }
     }
     .task {
-      if !load {
+      if tab != nil {
         await loadData()
       }
     }
   }
   
   func loadData() async {
-    load = true
-    isLoading = true;
-    do {
-      let data = try await api.getTopics(page: page, limit: pageLimit, tab: topicTab)
-      self.topics = data?.data
-    } catch {
-      
+    if let tab = tab {
+      isLoading = true
+      do {
+        let data = try await api.getTopics(page: page, limit: pageLimit, tab: tab)
+        self.topics = data?.data
+      } catch {
+        
+      }
+      isLoading = false
     }
-    isLoading = false;
   }
 }
 
 struct TopicListView_Previews: PreviewProvider {
   static var previews: some View {
-    TopicListView(topicTab: "测试节点主题")
+    TopicListView(tab: "测试节点主题")
   }
 }

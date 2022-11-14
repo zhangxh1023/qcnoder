@@ -43,9 +43,7 @@ struct TopicDetailView: View {
             .font(.system(size: 12))
             .foregroundColor(.gray)
             Spacer()
-            CollectBtnView(accesstoken: accesstoken,
-                           topicId: topicDetail.id,
-                           isCollect: topicDetail.isCollect ?? false)
+            CollectBtnView(topicDetailView: TopicDetailViewModel(topicDetail: topicDetail))
           }
           .padding(EdgeInsets(top: 5, leading: 0, bottom: 5, trailing: 0))
           

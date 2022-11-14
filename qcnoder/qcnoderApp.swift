@@ -24,6 +24,13 @@ struct qcnoderApp: App {
         UserSheetView()
       }
       .environmentObject(globalState)
+      .alert("提示",
+             isPresented: $globalState.isMainWindowAlert,
+             presenting: globalState.mainWindowAlertText)
+      { _ in
+      } message: { alertText in
+        Text(alertText)
+      }
     }
   }
 }

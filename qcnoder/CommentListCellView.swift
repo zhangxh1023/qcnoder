@@ -26,6 +26,8 @@ struct CommentListCellView: View {
   
   @State var isReplying = false
   
+  @EnvironmentObject var globalState: GlobalState
+  
   var body: some View {
     if let reply = reply {
       VStack(alignment: .leading) {
@@ -58,16 +60,18 @@ struct CommentListCellView: View {
           
           Spacer()
           
-          UpsView(replyView: ReplyViewModel(reply: reply), isHover: $isHover)
-          Button(action: {
-            print("show reply content")
-            showContentEditor = !showContentEditor
-          }, label: {
-            Image(systemName: showContentEditor
-                  ? "arrowshape.turn.up.left.fill"
-                  : "arrowshape.turn.up.left")
-          })
-          .buttonStyle(BorderlessButtonStyle())
+          if globalState.accesstoken != nil {
+            UpsView(replyView: ReplyViewModel(reply: reply), isHover: $isHover)
+            Button(action: {
+              print("show reply content")
+              showContentEditor = !showContentEditor
+            }, label: {
+              Image(systemName: showContentEditor
+                    ? "arrowshape.turn.up.left.fill"
+                    : "arrowshape.turn.up.left")
+            })
+            .buttonStyle(BorderlessButtonStyle())
+          }
         }
         Markdown(reply.content ?? "",
                  baseURL: URL(string: "https:"))
@@ -108,6 +112,7 @@ struct CommentListCellView: View {
           let data = try await api.createReply(topicId: topicId, content: replyContent, replyId: reply?.id ?? nil)
           if let success = data?.success, success {
             replyContent = "@\(reply?.author?.loginname ?? "") "
+            showContentEditor = false
           }
         } catch {
           

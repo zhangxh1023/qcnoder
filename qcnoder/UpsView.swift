@@ -27,7 +27,7 @@ struct UpsView: View {
         upButton
         Text(String(reply.ups?.count ?? 0))
       }
-    } else if globalState.accesstoken != nil {
+    } else {
       if isHover {
         upButton
       }
@@ -59,6 +59,12 @@ struct UpsView: View {
             if let success = data?.success, success {
               print("up success")
               replyView.toggleIsUped(id: id)
+            } else {
+              if globalState.showUserSheetView {
+                globalState.userSheetAlert(data?.errorMsg ?? "操作失败")
+              } else {
+                globalState.mainWindowAlert(data?.errorMsg ?? "操作失败")
+              }
             }
           } catch {
             print(error)

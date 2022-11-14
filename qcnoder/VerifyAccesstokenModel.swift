@@ -13,6 +13,7 @@ public struct VerifyAccesstokenModel: Codable {
   var loginname : String? = nil
   var avatarUrl : String? = nil
   var id        : String? = nil
+  var errorMsg  : String? = nil
 
   enum CodingKeys: String, CodingKey {
 
@@ -20,6 +21,7 @@ public struct VerifyAccesstokenModel: Codable {
     case loginname = "loginname"
     case avatarUrl = "avatar_url"
     case id        = "id"
+    case errorMsg  = "error_msg"
   
   }
 
@@ -30,6 +32,7 @@ public struct VerifyAccesstokenModel: Codable {
     loginname = try values.decodeIfPresent(String.self , forKey: .loginname )
     avatarUrl = try values.decodeIfPresent(String.self , forKey: .avatarUrl )
     id        = try values.decodeIfPresent(String.self , forKey: .id        )
+    errorMsg  = try values.decodeIfPresent(String.self , forKey: .errorMsg        )
  
   }
 

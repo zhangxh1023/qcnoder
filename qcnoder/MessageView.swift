@@ -16,7 +16,7 @@ struct MessageView: View {
   @State var message: MessageModel?
   
   var body: some View {
-    if let _ = globalState.accesstoken {
+    if globalState.accesstoken != nil {
       Group {
         if isLoading {
           ProgressView()

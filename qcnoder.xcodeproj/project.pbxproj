@@ -43,6 +43,11 @@
 		E7EAFBF9291B489F00124796 /* ReplyRespModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EAFBF8291B489F00124796 /* ReplyRespModel.swift */; };
 		E7EB385228FE7A3C005B9870 /* CurrentUserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EB385128FE7A3C005B9870 /* CurrentUserView.swift */; };
 		E7EB385628FE80FB005B9870 /* VerifyAccesstokenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EB385528FE80FB005B9870 /* VerifyAccesstokenModel.swift */; };
+		E7FCA5EB29221E0F006ACC62 /* CreateTopicView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7FCA5EA29221E0F006ACC62 /* CreateTopicView.swift */; };
+		E7FCA5EE29223111006ACC62 /* CollectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7FCA5ED29223111006ACC62 /* CollectView.swift */; };
+		E7FCA5F029223EC1006ACC62 /* SuccessModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7FCA5EF29223EC1006ACC62 /* SuccessModel.swift */; };
+		E7FCA5F4292242AC006ACC62 /* ExTopicDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7FCA5F3292242AC006ACC62 /* ExTopicDetailModel.swift */; };
+		E7FCA5F629224339006ACC62 /* TopicDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7FCA5F529224339006ACC62 /* TopicDetailViewModel.swift */; };
 		E7FD4B2628E4478B004D8D12 /* qcnoderApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7FD4B2528E4478B004D8D12 /* qcnoderApp.swift */; };
 		E7FD4B2A28E4478E004D8D12 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E7FD4B2928E4478E004D8D12 /* Assets.xcassets */; };
 		E7FD4B2D28E4478E004D8D12 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E7FD4B2C28E4478E004D8D12 /* Preview Assets.xcassets */; };
@@ -105,6 +110,11 @@
 		E7EAFBF8291B489F00124796 /* ReplyRespModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReplyRespModel.swift; sourceTree = "<group>"; };
 		E7EB385128FE7A3C005B9870 /* CurrentUserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentUserView.swift; sourceTree = "<group>"; };
 		E7EB385528FE80FB005B9870 /* VerifyAccesstokenModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyAccesstokenModel.swift; sourceTree = "<group>"; };
+		E7FCA5EA29221E0F006ACC62 /* CreateTopicView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateTopicView.swift; sourceTree = "<group>"; };
+		E7FCA5ED29223111006ACC62 /* CollectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectView.swift; sourceTree = "<group>"; };
+		E7FCA5EF29223EC1006ACC62 /* SuccessModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessModel.swift; sourceTree = "<group>"; };
+		E7FCA5F3292242AC006ACC62 /* ExTopicDetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExTopicDetailModel.swift; sourceTree = "<group>"; };
+		E7FCA5F529224339006ACC62 /* TopicDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicDetailViewModel.swift; sourceTree = "<group>"; };
 		E7FD4B2228E4478B004D8D12 /* qcnoder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = qcnoder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7FD4B2528E4478B004D8D12 /* qcnoderApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = qcnoderApp.swift; sourceTree = "<group>"; };
 		E7FD4B2928E4478E004D8D12 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -210,6 +220,7 @@
 				E7DEDA0A2913B29D00FB7499 /* TopicRespModel.swift */,
 				E7DEDA0C2913B69000FB7499 /* UpsRespModel.swift */,
 				E7EAFBF8291B489F00124796 /* ReplyRespModel.swift */,
+				E7FCA5EF29223EC1006ACC62 /* SuccessModel.swift */,
 			);
 			name = models;
 			sourceTree = "<group>";
@@ -252,6 +263,8 @@
 				E739405328FD2E42004EA24E /* GlobalState.swift */,
 				E7FE3ED3291A48EE00B38C73 /* ReplyViewModel.swift */,
 				E7FE3ED5291A495D00B38C73 /* ExReplyModel.swift */,
+				E7FCA5F3292242AC006ACC62 /* ExTopicDetailModel.swift */,
+				E7FCA5F529224339006ACC62 /* TopicDetailViewModel.swift */,
 			);
 			path = utils;
 			sourceTree = "<group>";
@@ -266,6 +279,22 @@
 				E7DEDA0E2913B89700FB7499 /* UpsView.swift */,
 			);
 			name = components;
+			sourceTree = "<group>";
+		};
+		E7FCA5E929221DF5006ACC62 /* createTopic */ = {
+			isa = PBXGroup;
+			children = (
+				E7FCA5EA29221E0F006ACC62 /* CreateTopicView.swift */,
+			);
+			path = createTopic;
+			sourceTree = "<group>";
+		};
+		E7FCA5EC29223100006ACC62 /* collect */ = {
+			isa = PBXGroup;
+			children = (
+				E7FCA5ED29223111006ACC62 /* CollectView.swift */,
+			);
+			path = collect;
 			sourceTree = "<group>";
 		};
 		E7FD4B1928E4478B004D8D12 = {
@@ -313,6 +342,8 @@
 		E7FD4B5028E4487B004D8D12 /* views */ = {
 			isa = PBXGroup;
 			children = (
+				E7FCA5EC29223100006ACC62 /* collect */,
+				E7FCA5E929221DF5006ACC62 /* createTopic */,
 				E75D1B2A28F9456100CEE595 /* user */,
 				E73E673228F40B9500D67B36 /* comment */,
 				E726C27C28F018D40016F295 /* topicDetail */,
@@ -470,6 +501,7 @@
 			files = (
 				E7FD4B5428E44BC3004D8D12 /* TopicListView.swift in Sources */,
 				E74C0D9628ED77BD00A9F622 /* UserNameView.swift in Sources */,
+				E7FCA5F4292242AC006ACC62 /* ExTopicDetailModel.swift in Sources */,
 				E743B40B28E978A9001CD16C /* QcnoderApi.swift in Sources */,
 				E75D1B3A28F964D000CEE595 /* UserView.swift in Sources */,
 				E726C27528F0185A0016F295 /* TopicDetailModel.swift in Sources */,
@@ -479,6 +511,7 @@
 				E74C0D9428ED5D1800A9F622 /* DateTime.swift in Sources */,
 				E7DEDA0B2913B29D00FB7499 /* TopicRespModel.swift in Sources */,
 				E77835B428EC20C2003D3048 /* TopicTarget.swift in Sources */,
+				E7FCA5EE29223111006ACC62 /* CollectView.swift in Sources */,
 				E7DEDA0F2913B89700FB7499 /* UpsView.swift in Sources */,
 				E77835A828EAB930003D3048 /* TopicListCellView.swift in Sources */,
 				E734B5B628F5096200F8B0FB /* ContentEditor.swift in Sources */,
@@ -489,6 +522,7 @@
 				E726C27728F0186F0016F295 /* ReplyModel.swift in Sources */,
 				E7EB385228FE7A3C005B9870 /* CurrentUserView.swift in Sources */,
 				E7EB385628FE80FB005B9870 /* VerifyAccesstokenModel.swift in Sources */,
+				E7FCA5F629224339006ACC62 /* TopicDetailViewModel.swift in Sources */,
 				E7FE3ED6291A495D00B38C73 /* ExReplyModel.swift in Sources */,
 				E7EAFBF9291B489F00124796 /* ReplyRespModel.swift in Sources */,
 				E734B5C028F51EB800F8B0FB /* MessageView.swift in Sources */,
@@ -503,8 +537,10 @@
 				E726C27E28F018F50016F295 /* TopicDetailView.swift in Sources */,
 				E734B5C228F51EC800F8B0FB /* SettingView.swift in Sources */,
 				E7FD4B5228E449B7004D8D12 /* SidebarView.swift in Sources */,
+				E7FCA5EB29221E0F006ACC62 /* CreateTopicView.swift in Sources */,
 				E75D1B2E28F9459F00CEE595 /* UserPopoverView.swift in Sources */,
 				E739405428FD2E42004EA24E /* GlobalState.swift in Sources */,
+				E7FCA5F029223EC1006ACC62 /* SuccessModel.swift in Sources */,
 				E75D1B3628F9499800CEE595 /* CnodeResponseModel.swift in Sources */,
 				E73E673628F40BBE00D67B36 /* CommentListCellView.swift in Sources */,
 				E726C28228F01A5C0016F295 /* TopicModel2Detail.swift in Sources */,

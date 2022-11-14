@@ -8,14 +8,18 @@
 import Foundation
 
 public struct UpsRespModel: Codable {
+  
   public let success: Bool?
   
   public let action: String?
   
+  public let errorMsg: String?
+  
   enum CodingKeys: String, CodingKey {
     
-    case success   = "success"
-    case action    = "action"
+    case success    = "success"
+    case action     = "action"
+    case errorMsg   = "error_msg"
     
   }
 }

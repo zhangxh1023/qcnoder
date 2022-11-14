@@ -24,7 +24,7 @@ struct CurrentUserView: View {
       if let user = user {
         UserView(user: user)
       } else {
-        if let _ = globalState.accesstoken {
+        if globalState.accesstoken != nil {
           ProgressView()
             .task {
               fetchUser()
@@ -48,10 +48,13 @@ struct CurrentUserView: View {
     isLoading = true
     Task {
       let verifyData = try await api.verifyAccesstoken()
-      globalState.user = verifyData
       if let loginname = verifyData?.loginname {
+        globalState.user = verifyData
         let userData = try await api.getUser(loginname: loginname)
         user = userData?.data
+      } else {
+        globalState.accesstoken = nil
+        globalState.mainWindowAlert(verifyData?.errorMsg ?? "登录失败")
       }
       isLoading = false
     }
